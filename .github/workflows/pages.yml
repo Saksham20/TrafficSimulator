@@ -1,0 +1,62 @@
+# Publishes the traffic simulation as a GitHub Pages site.
+# The comparison page is the site index, and it loads traffic_flow_model.js
+# and traffic_flow_view.js from the same directory.
+#
+# One-time setup, if this repository has never had Pages turned on:
+# Settings → Pages → Build and deployment → Source → GitHub Actions.
+# Then re-run this workflow. Later pushes of these files publish on their own.
+name: GitHub Pages
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "traffic_flow_comparison.html"
+      - "traffic_flow_model.js"
+      - "traffic_flow_view.js"
+      - "traffic_flow_sources.md"
+      - "explainer_silk_board/Urban_Arterial_Traffic_Flow_Simulation__Status_Quo_vs._TSM.html"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp traffic_flow_comparison.html _site/index.html
+          cp traffic_flow_comparison.html _site/traffic_flow_comparison.html
+          cp traffic_flow_model.js _site/traffic_flow_model.js
+          cp traffic_flow_view.js _site/traffic_flow_view.js
+          cp traffic_flow_sources.md _site/traffic_flow_sources.md
+          cp "explainer_silk_board/Urban_Arterial_Traffic_Flow_Simulation__Status_Quo_vs._TSM.html" \
+            _site/indiranagar-simulator.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
