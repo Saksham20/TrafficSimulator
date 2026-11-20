@@ -1,0 +1,652 @@
+=== PAGE 1 ===
+12300
+3600
+3600
+750
+750
+5100
+750
+750
+3600
+3600
+6500
+2500
+5500
+20200
+9000
+500
+1200
+1500
+150
+100
+6907
+5454
+225
+STRUT
+(M150)
+200
+DRAINAGE
+SPOUT
+2250
+FRL
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm APP POLYMER MODIFIED BITUMINOUS MEMBRANE
+2.5 %
+6292
+150
+100
+5454
+225
+200
+2250
+FRL
+2.5 %
+1500
+9000
+500
+280
+UHPFRC U GRIDER
+M150CC
+800
+400
+2500
+750
+1800
+12300
+3600
+3600
+750
+3600
+TITLE :
+SECTION & PLAN FOR 20.20m
+PROJECT:
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+CONSULTANTS:
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+CLIENT:
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+SCALE = 1:75
+DRAWING NO : 
+SSP/DWG/PRJ/2025-26/18-10-1
+SECTION FOR 20200
+PLAN
+GROUND LEVEL
+GROUND LEVEL
+
+=== PAGE 2 ===
+4300
+650
+650
+3000
+650
+3000
+3000
+650
+7300
+4000
+2200
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+22 (D - 15.2)
+PLATE
+SPOUT
+7500
+2.5%
+DRAINAGE
+8500
+275
+200
+500
+400
+280
+FRL
+UHPFRC U GRIDER
+M150CC
+1750
+1750
+1600
+4500
+800
+GROUND LEVEL
+2500
+5500
+2950
+500
+500
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm APP POLYMER MODIFIED BITUMINOUS MEMBRANE
+SECTION FOR 8500
+650
+3000
+3000
+650
+7300
+TITLE :
+SECTION & PLAN FOR 8.50m
+PROJECT:
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+CONSULTANTS:
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+CLIENT:
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+SCALE = 1:75
+DRAWING NO : 
+SSP/DWG/PRJ/2025-26/19-10-2
+PLAN
+GROUND LEVEL
+1500
+
+=== PAGE 3 ===
+4300
+650
+650
+3000
+650
+3000
+3000
+650
+7300
+2200
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+22 (D - 15.2)
+PLATE
+SPOUT
+6000
+2.5%
+DRAINAGE
+7000
+275
+200
+500
+400
+280
+FRL
+UHPFRC U GRIDER
+M150CC
+1600
+4500
+800
+GROUND LEVEL
+2500
+5500
+2950
+500
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm APP POLYMER MODIFIED BITUMINOUS MEMBRANE
+SECTION FOR 7000
+650
+3000
+3000
+650
+7300
+TITLE :
+SECTION & PLAN FOR 7.0m
+PROJECT:
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+CONSULTANTS:
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+CLIENT:
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+SCALE = 1:75
+DRAWING NO : 
+SSP/DWG/PRJ/2025-26/19-10-3
+PLAN
+GROUND LEVEL
+1500
+
+=== PAGE 4 ===
+TITLE :
+SECTION & PLAN FOR PORTAL PIER
+PROJECT:
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+CONSULTANTS:
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+CLIENT:
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+SCALE = 1:75
+DRAWING NO : 
+SSP/DWG/PRJ/2025-26/19-10-4
+SECTION FOR PORTAL PIER
+GROUND LEVEL
+GROUND LEVEL
+PLAN - B
+A
+B
+PLAN - A
+
+=== PAGE 5 ===
+SECTION FOR CANTILEVER PIER
+TITLE :
+SECTION & PLAN FOR CANTILEVER PIER
+PROJECT:
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+CONSULTANTS:
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+CLIENT:
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+SCALE = 1:75
+DRAWING NO : 
+SSP/DWG/PRJ/2025-26/19-10-5
+GROUND LEVEL
+GROUND LEVEL
+PSC PIER CAP
+4300
+650
+650
+3000
+650
+3000
+3000
+650
+7300
+PLAN
+
+=== PAGE 6 ===
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+- M40
+(b) DECK SLAB
+- M150
+LONGITUDINAL SECTION OF STRUTTED BOX GIRDER 45.0m
+ULONGITUDINAL SECTION OF STRUTTED BOX GIRDER
+(Varies between 0.0m to 0.0m)
+250 DECK SLAB
+STRUTS (M150)
+600  DIAPHRAGM
+SEGMENTAL UHPFRC STRUTTED BOX
+GIRDER
+600  DIAPHRAGM
+  Expansion Joint
+  Expansion Joint
+2250
+1500
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+FRL
+FRL
+45000
+1200
+5100
+1800
+2250
+800
+6500
+5520
+2500
+5500
+PSC PIER CAP
+SECTION FOR 20.2m
+3600
+750
+750
+400
+1200
+5100
+1800
+2250
+800
+6500
+5520
+PSC PIER CAP
+SECTION FOR 20.2m
+3600
+750
+750
+400
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+SCALE = NTS
+SSP/DWG/PRJ/2025-26/18-10-6
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+TITLE :
+PROJECT:
+CONSULTANTS:
+CLIENT:
+DRAWING NO : 
+3mm APP POLYMER MODIFIED BITUMINOUS MEMBRANE 
+
+=== PAGE 7 ===
+TYPICAL CROSS SECTION FOR 20.2M REINFORCED EARTH  WALL APPROACH
+TYPICAL CROSS SECTION FOR 20.2M REINFORCED EARTH  WALL APPROACH
+9000
+500
+20200
+PROPERTY LIMIT
+ Service Road
+PAVEMENT CRUST 
+SLOPE
+2.5%
+9000
+500
+PROPERTY LIMIT
+ Service Road
+PAVEMENT CRUST 
+2.5%
+40mm BC
+80mm DBM
+250mm WMM
+200mm GSB
+1200
+RE INFORCED EARTH FILL
+Levelling Pad
+RE Wall Facia
+Drainage Media
+Friction Slab
+Crash barrier
+500mm Sub Grade
+FRL
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+- M40
+(b) DECK SLAB
+- M150
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+SCALE = NTS
+SSP/DWG/PRJ/2025-26/18-10-7
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+TITLE :
+PROJECT:
+CONSULTANTS:
+CLIENT:
+DRAWING NO : 
+
+=== PAGE 8 ===
+TYPICAL CROSS SECTION FOR 8.50M  REINFORCED EARTH  WALL APPROACH
+Slope 2.5%
+TYPICAL CROSS SECTION FOR 8.50M  REINFORCED EARTH  WALL APPROACH
+7500
+500
+8500
+500
+PRIVATE PROPERTY
+ Service Road
+PAVEMENT CRUST 
+SLOPE
+2.5%
+GL
+1000
+40mm BC
+80mm DBM
+250mm WMM
+200mm GSB
+PRIVATE PROPERTY
+ Service Road
+PAVEMENT CRUST 
+SLOPE
+2.5%
+Friction Slab
+500mm GSB
+Crash barrier
+FRL
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+- M40
+(b) DECK SLAB
+- M150
+SHEET NO : 1 OF 1
+DATE: 23-01-2026
+SCALE = NTS
+SSP/DWG/PRJ/2025-26/18-10-8
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+TITLE :
+PROJECT:
+CONSULTANTS:
+CLIENT:
+DRAWING NO : 
+
+=== PAGE 9 ===
+37.0m 
+Existing Cross Section @ Chainage 0+150
+8.1m
+2.5% Slope
+Property Line
+Drain
+1.2m
+8.1m
+Service Road
+Service Road
+Drain
+Cover Slabs
+2.5% Slope
+Property Line
+Bituminous Concrete (BC)
+2.5m
+FP Cum
+Existing Flyover
+0.80m
+8.8m
+7.5m
+Drain
+Drain
+Paver Blocks
+34.5m 
+3.6m
+Existing Cross Section @ CH: 0+330
+1.0m
+14.8m
+2.5% Slope
+Property Line
+Drain
+1.2m
+1.3m
+12.6m
+Carriageway
+Carriageway
+FP
+Drain
+ Paver Blocks
+Cover Slabs
+2.5% Slope
+Bituminous Concrete (BC)
+FP Cum
+Drain
+Property Line
+Drain
+
+=== PAGE 10 ===
+26.0m 
+Existing Cross Section @ CH: 1+025
+0.6m
+12.0m
+2.5% Slope
+Property Line
+Drain
+1.0m
+9.8m
+2.6m
+Carriageway
+Carriageway
+Drain
+ Paver Blocks
+Cover Slabs
+2.5% Slope
+Property Line
+Drain
+Bituminous Concrete (BC)
+FP Cum
+Drain
+26.0m 
+Existing Cross Section @ CH: 1+800
+0.7m
+14.3m
+2.5% Slope
+Property Line
+Drain
+4.0m
+15.3m
+2.2m
+Carriageway
+Carriageway
+FP Cum 
+ Paver Blocks
+Cover Slabs
+2.5% Slope
+Property Line
+Drain
+Bituminous Concrete (BC)
+FP Cum
+Drain
+Drain
+
+=== PAGE 11 ===
+33.0m 
+Existing Cross Section @ CH: 2+450
+17.6m
+2.5% Slope
+Property Line
+Drain
+2.0m
+7.4m
+2.0m
+Service Road
+Carriageway
+FP Cum 
+ Paver Blocks
+Cover Slabs
+Property Line
+Drain
+Bituminous Concrete (BC)
+FP
+Drain
+Thin White Topping
+RCC
+1.0m
+Drain
+3.0m
+29.1m 
+Existing Cross Section @ CH: 3+250
+1.0m
+14.8m
+2.5% Slope
+Property Line
+Drain
+1.7m
+11.6m
+Carriageway
+Carriageway
+FP Cum
+Drain
+ Paver Blocks
+Cover Slabs
+2.5% Slope
+Bituminous Concrete (BC)
+Metro Piller
+Property Limit
+
+=== PAGE 12 ===
+17.3m
+Strom Water Drain
+Property Line
+Existing Bridge 
+8.0m
+5.5m
+Strom Water Drain
+Cement Road
+2.0m
+Carriage Way
+Retaining Wall
+Cross Section @ Chainage 0+125
+Retaining Wall
+Kavika Property
+23.0m 
+Existing Cross Section @  Chainage 0+250 (NICE Road)
+0.7m
+11.0
+2.0% Slope
+11.3m
+Carriageway
+Carriageway
+2.0% Slope
+Thin White Topping

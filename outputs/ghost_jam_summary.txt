@@ -1,0 +1,5 @@
+Ghost-jam simulation: same 1-lane road, no bottleneck, behaviour only
+  Disciplined (smooth, attentive)          max throughput  1998 veh/h/lane  (100% of disciplined)
+  Erratic driving (random braking)         max throughput  1376 veh/h/lane  ( 69% of disciplined)
+  Erratic + slow restarts                  max throughput   897 veh/h/lane  ( 45% of disciplined)
+  Erratic + slow restarts + kerb stops     max throughput   842 veh/h/lane  ( 42% of disciplined)

@@ -1,0 +1,2773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="tool">
+  <meta name="design-style" content="carbon">
+  <title>Indiranagar 100ft Road — Urban Arterial Traffic Flow Simulator</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces (Carbon) */
+      --background: #ffffff;
+      --surface-container-low: #f4f4f4;
+      --surface-container: #f4f4f4;
+      --surface-container-high: #e0e0e0;
+
+      /* Ink */
+      --on-surface: #161616;
+      --on-surface-variant: #525252;
+
+      /* Rules */
+      --outline: #8d8d8d;
+      --outline-variant: #e0e0e0;
+
+      /* Accents */
+      --primary: #0f62fe;
+      --on-primary: #ffffff;
+      --primary-container: #d0e2ff;
+      --on-primary-container: #161616;
+      --secondary: #6f6f6f;
+      --tertiary: #198038;
+      --error: #da1e28;
+      --on-error: #ffffff;
+
+      /* Semantic & Status */
+      --positive: #198038;
+      --positive-container: #defbe6;
+      --warning: #8e6a00;
+      --warning-container: #fcf4d6;
+      --error-container: #ffd7d9;
+      --focus: #0f62fe;
+
+      /* Data series */
+      --data-1: #0f62fe;
+      --data-2: #6929c4;
+      --data-3: #005d5d;
+      --data-4: #9f1853;
+      --data-context: #8d8d8d;
+
+      /* Canvas Simulation Palette Tokens */
+      --sim-bg-block: #e8e9eb;
+      --sim-building: #d4d7dc;
+      --sim-building-roof: #c2c6cc;
+      --sim-awning-a: #b85d43;
+      --sim-awning-b: #2b6cb0;
+      --sim-sidewalk: #dcdedf;
+      --sim-curb: #a8adb5;
+      --sim-asphalt: #262a30;
+      --sim-asphalt-cross: #2c3138;
+      --sim-lane-line: #d4d8dd;
+      --sim-lane-yellow: #f1c21b;
+      --sim-median: #435246;
+      --sim-tree: #3a6b48;
+      --sim-tree-light: #518c62;
+      --sim-bay-apron: #35414f;
+      --sim-pocket-apron: #303a47;
+      --sim-parking-off: #cdd3da;
+
+      /* Vehicle Tokens */
+      --veh-bus: #2b8cbe;
+      --veh-bus-roof: #edf6fb;
+      --veh-car-1: #e5e7eb;
+      --veh-car-2: #94a3b8;
+      --veh-car-3: #64748b;
+      --veh-car-4: #cbd5e1;
+      --veh-auto: #f5c518;
+      --veh-auto-top: #1b6b3a;
+      --veh-bike: #f97316;
+      --veh-lcv: #f8fafc;
+      --veh-lcv-cargo: #e2e8f0;
+      --veh-brake: #ff3b30;
+      --veh-headlight: #fff7cc;
+      --veh-hazard: #ff9f0a;
+
+      /* Signals & Overlays */
+      --sig-red: #fa4d56;
+      --sig-amber: #f1c21b;
+      --sig-green: #42be65;
+      --wave-shock: rgba(250, 77, 86, 0.38);
+      --wave-shock-stroke: #ff6b72;
+      --wave-laminar: rgba(66, 190, 101, 0.16);
+      --wave-laminar-stroke: #42be65;
+      --hotspot-pin-a: #da1e28;
+      --hotspot-pin-b: #0f62fe;
+
+      /* Fonts */
+      --font-headline: 'IBM Plex Sans', sans-serif;
+      --font-body: 'IBM Plex Sans', sans-serif;
+      --font-label: 'IBM Plex Mono', monospace;
+
+      /* Type Scale (Focused Tool) */
+      --display-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+      --headline-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+      --subhead-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+      --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+      --label-size: 0.75rem;
+
+      /* Shape */
+      --rounded: 0.125rem;
+      --rounded-lg: 0.25rem;
+      --rounded-full: 0.75rem;
+
+      /* Effects */
+      --shadow-1: 0 2px 6px rgb(0 0 0 / 0.1);
+      --shadow-2: 0 4px 12px rgb(0 0 0 / 0.12);
+      --rule: 1px solid var(--outline-variant);
+      --field-rule: 1px solid var(--outline);
+      --indicator: 2px solid var(--primary);
+
+      /* Spacing scale */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+
+      /* Motion */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { position: static !important; }
+
+    .page-grid {
+      display: grid;
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .page-grid * { min-width: 0; }
+
+    /* Focus rings */
+    :focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    /* Typography */
+    .headline {
+      font-family: var(--font-headline);
+      font-weight: 300;
+      font-size: var(--display-size);
+      letter-spacing: 0;
+      line-height: 1.18;
+      margin: 0;
+      color: var(--on-surface);
+    }
+    .headline strong {
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: var(--headline-size);
+      line-height: 1.25;
+      margin: 0;
+      color: var(--on-surface);
+    }
+
+    .subhead {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: var(--subhead-size);
+      line-height: 1.3;
+      margin: 0;
+      color: var(--on-surface);
+    }
+
+    .label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--on-surface-variant);
+      display: block;
+    }
+
+    .helper-text {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* Header */
+    .site-header {
+      border-bottom: var(--rule);
+      padding-bottom: var(--space-md);
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-md);
+    }
+    .header-lede {
+      max-width: 72ch;
+      color: var(--on-surface-variant);
+      margin: 0;
+      font-size: var(--body-size);
+    }
+
+    /* Carbon Layers */
+    .layer {
+      background: var(--surface-container);
+      border-radius: 0;
+      padding: var(--space-md);
+    }
+    .layer .layer {
+      background: var(--surface-container-high);
+    }
+
+    /* Control Strip & Tabs */
+    .control-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+      gap: var(--space-md);
+      align-items: end;
+      border-bottom: var(--rule);
+      padding-bottom: var(--space-md);
+    }
+
+    .tab-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      border-bottom: var(--rule);
+      align-self: end;
+    }
+
+    .tab-btn {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: var(--space-sm) var(--space-md);
+      min-height: 44px;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--on-surface-variant);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .tab-btn:hover {
+      background: var(--surface-container);
+      color: var(--on-surface);
+    }
+    .tab-btn.is-active {
+      border-bottom: var(--indicator);
+      font-weight: 600;
+      color: var(--on-surface);
+    }
+
+    .sim-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: end;
+      justify-content: flex-end;
+    }
+
+    .ctrl-field {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .btn {
+      appearance: none;
+      border-radius: 0;
+      min-height: 44px;
+      padding: var(--space-sm) var(--space-md);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      border: 1px solid transparent;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    .btn-primary:hover {
+      background: color-mix(in srgb, var(--primary), var(--on-surface) 22%);
+    }
+    .btn-secondary {
+      background: var(--background);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    .btn-secondary:hover {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+    }
+    .btn-ghost {
+      background: var(--surface-container);
+      color: var(--on-surface);
+      border-bottom: var(--field-rule);
+    }
+    .btn-ghost:hover {
+      background: var(--surface-container-high);
+    }
+    .btn-ghost.is-on {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      border-bottom: var(--indicator);
+      font-weight: 600;
+    }
+
+    .speed-group {
+      display: inline-flex;
+      background: var(--surface-container);
+      border-bottom: var(--field-rule);
+    }
+    .speed-btn {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--on-surface-variant);
+      font-family: var(--font-label);
+      font-size: 0.8125rem;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0 var(--space-sm);
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out);
+    }
+    .speed-btn:hover {
+      background: var(--surface-container-high);
+      color: var(--on-surface);
+    }
+    .speed-btn.is-active {
+      background: var(--primary);
+      color: var(--on-primary);
+      font-weight: 600;
+    }
+
+    .slider-wrap {
+      background: var(--surface-container);
+      border-bottom: var(--field-rule);
+      padding: var(--space-xs) var(--space-md);
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .slider-wrap input[type="range"] {
+      width: 120px;
+      accent-color: var(--primary);
+      cursor: pointer;
+      margin: 0;
+    }
+    .slider-val {
+      font-family: var(--font-label);
+      font-size: 0.8125rem;
+      color: var(--on-surface);
+      min-width: 72px;
+      text-align: right;
+    }
+
+    /* Live Telemetry Tiles */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+    .kpi-tile {
+      background: var(--surface-container);
+      padding: var(--space-md);
+      display: grid;
+      gap: var(--space-xs);
+      align-content: start;
+    }
+    .kpi-tile.is-primary {
+      border-bottom: var(--indicator);
+    }
+    .kpi-readings {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--space-sm);
+      align-items: baseline;
+      padding-top: var(--space-xs);
+    }
+    .kpi-readings.single-col {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .kpi-col {
+      display: grid;
+      gap: 2px;
+    }
+    .kpi-scenario-tag {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--on-surface-variant);
+    }
+    .kpi-value {
+      font-family: var(--font-label);
+      font-weight: 300;
+      font-size: 1.625rem;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+      color: var(--on-surface);
+    }
+    .kpi-value.is-bad { color: var(--error); font-weight: 400; }
+    .kpi-value.is-good { color: var(--positive); font-weight: 400; }
+    .kpi-value.is-warn { color: var(--warning); font-weight: 400; }
+
+    .kpi-unit {
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      color: var(--on-surface-variant);
+    }
+
+    .los-badge {
+      display: inline-flex;
+      align-items: center;
+      height: 24px;
+      padding: 0 var(--space-sm);
+      border-radius: var(--rounded-full);
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      width: fit-content;
+    }
+    .los-badge.is-bad {
+      background: var(--error-container);
+      color: var(--on-surface);
+    }
+    .los-badge.is-good {
+      background: var(--positive-container);
+      color: var(--on-surface);
+    }
+    .los-badge.is-neutral {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+    }
+
+    /* Simulation Viewport */
+    .sim-stage {
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .legend-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm) var(--space-md);
+      padding-bottom: var(--space-xs);
+      border-bottom: var(--rule);
+    }
+    .legend-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-md);
+      align-items: center;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      color: var(--on-surface-variant);
+    }
+    .swatch {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .swatch-bus { background: var(--veh-bus); border: 1px solid var(--on-surface); }
+    .swatch-car { background: var(--veh-car-2); border: 1px solid var(--on-surface); }
+    .swatch-auto { background: var(--veh-auto); border: 1px solid var(--veh-auto-top); }
+    .swatch-bike { background: var(--veh-bike); }
+    .swatch-lcv { background: var(--veh-lcv-cargo); border: 1px solid var(--on-surface); }
+    .swatch-shock { background: var(--wave-shock-stroke); }
+    .swatch-green { background: var(--sig-green); }
+
+    .canvas-shell {
+      position: relative;
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      min-height: 460px;
+      overflow: hidden;
+    }
+    #traffic-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      cursor: pointer;
+    }
+
+    .canvas-caption-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    /* Hotspot Selector & Inspector Split */
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+
+    .hotspot-section {
+      display: grid;
+      gap: var(--space-md);
+    }
+    .section-head {
+      border-bottom: var(--rule);
+      padding-bottom: var(--space-sm);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--space-sm);
+    }
+
+    .hotspot-pills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+      gap: var(--space-xs);
+    }
+    .hotspot-btn {
+      appearance: none;
+      text-align: left;
+      background: var(--surface-container);
+      border: 0;
+      border-left: 3px solid transparent;
+      padding: var(--space-sm) var(--space-md);
+      min-height: 44px;
+      cursor: pointer;
+      display: grid;
+      gap: 2px;
+      transition: background-color var(--dur-micro) var(--ease-out);
+    }
+    .hotspot-btn:hover {
+      background: var(--surface-container-high);
+    }
+    .hotspot-btn.is-active {
+      background: var(--primary-container);
+      border-left: 3px solid var(--primary);
+    }
+    .hotspot-btn-tag {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--on-surface-variant);
+    }
+    .hotspot-btn.is-bad .hotspot-btn-tag { color: var(--error); }
+    .hotspot-btn.is-good .hotspot-btn-tag { color: var(--positive); }
+    .hotspot-btn.is-active .hotspot-btn-tag { color: var(--on-primary-container); }
+    .hotspot-btn-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--on-surface);
+    }
+
+    .inspector-card {
+      background: var(--surface-container);
+      padding: var(--space-md);
+      border-left: 3px solid var(--primary);
+      display: grid;
+      gap: var(--space-sm);
+    }
+    .inspector-card.is-bad { border-left-color: var(--error); }
+    .inspector-card.is-good { border-left-color: var(--positive); }
+
+    .inspector-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+      gap: var(--space-sm);
+      padding-top: var(--space-xs);
+      border-top: var(--rule);
+    }
+    .inspector-stat {
+      background: var(--surface-container-high);
+      padding: var(--space-sm);
+    }
+    .inspector-stat-val {
+      font-family: var(--font-label);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--on-surface);
+    }
+
+    /* Live Telemetry Chart */
+    .chart-panel {
+      display: grid;
+      gap: var(--space-xs);
+      padding-top: var(--space-sm);
+    }
+    .chart-container {
+      background: var(--surface-container);
+      padding: var(--space-sm);
+      min-height: 190px;
+    }
+    #telemetry-canvas {
+      display: block;
+      width: 100%;
+      height: 170px;
+    }
+
+    /* Right Column: Corridor Spec & Comparison Table */
+    .spec-panel {
+      display: grid;
+      gap: var(--space-md);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .data-table th {
+      background: var(--surface-container-high);
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--on-surface-variant);
+      text-align: left;
+      padding: var(--space-sm);
+    }
+    .data-table th.num,
+    .data-table td.num {
+      text-align: right;
+      font-family: var(--font-label);
+      font-variant-numeric: tabular-nums;
+    }
+    .data-table td {
+      padding: var(--space-sm);
+      border-bottom: var(--rule);
+      color: var(--on-surface);
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: var(--surface-container);
+    }
+
+    .mix-bars {
+      display: grid;
+      gap: var(--space-xs);
+    }
+    .mix-row {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr) 54px;
+      gap: var(--space-sm);
+      align-items: center;
+      font-size: 0.8125rem;
+    }
+    .mix-track {
+      height: 10px;
+      background: var(--surface-container-high);
+      overflow: hidden;
+    }
+    .mix-fill {
+      height: 100%;
+      background: var(--data-1);
+    }
+    .mix-fill.is-2 { background: var(--data-2); }
+    .mix-fill.is-3 { background: var(--data-3); }
+    .mix-fill.is-4 { background: var(--data-4); }
+    .mix-fill.is-5 { background: var(--data-context); }
+
+    .source-footer {
+      border-top: var(--rule);
+      padding-top: var(--space-md);
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+
+    @media (max-width: 900px) {
+      .control-bar {
+        grid-template-columns: 1fr;
+      }
+      .sim-controls {
+        justify-content: flex-start;
+      }
+      .analysis-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-grid {
+        padding: var(--space-sm);
+        gap: var(--space-md);
+      }
+      .canvas-shell,
+      #traffic-canvas {
+        min-height: 360px;
+      }
+      .slider-wrap input[type="range"] {
+        width: 96px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-grid">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-meta">
+        <span class="label">Urban Arterial Traffic Simulation · 2-Lane Divided Carriageway</span>
+        <span class="label">Indiranagar 100ft Rd / OMR–Silk Board Baseline</span>
+      </div>
+      <h1 class="headline">Same road, <strong>two realities</strong>: friction gridlock vs. bundled TSM</h1>
+      <p class="header-lede">
+        Direct 2D microscopic simulation comparing today's unchannelized status quo (in-lane bus stops, curbside encroachment, lateral cut-ins, and LWR shockwaves) against identical carriageway geometry managed with 46 indented bus bays, clear curbs, turn pockets, and a 35 km/h Green Wave.
+      </p>
+    </header>
+
+    <!-- Primary Scenario Tabs & Controls -->
+    <section class="control-bar" aria-label="Simulation controls">
+      <div class="tab-group" role="tablist" aria-label="Scenario View">
+        <button type="button" role="tab" id="tab-compare" class="tab-btn is-active" aria-selected="true" onclick="setScenarioMode('compare')">
+          <i data-lucide="columns-2" width="16" height="16" aria-hidden="true"></i>
+          <span>Compare A vs B</span>
+        </button>
+        <button type="button" role="tab" id="tab-a" class="tab-btn" aria-selected="false" onclick="setScenarioMode('A')">
+          <span>Scenario A: Today As-Is</span>
+        </button>
+        <button type="button" role="tab" id="tab-b" class="tab-btn" aria-selected="false" onclick="setScenarioMode('B')">
+          <span>Scenario B: Done Right (TSM)</span>
+        </button>
+      </div>
+
+      <div class="sim-controls">
+        <div class="ctrl-field">
+          <span class="label">Playback</span>
+          <div style="display:flex; gap:var(--space-xs);">
+            <button type="button" id="btn-play-pause" class="btn btn-primary" onclick="togglePlayPause()">
+              <i data-lucide="pause" width="16" height="16" aria-hidden="true"></i>
+              <span id="play-pause-text">Pause</span>
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="resetSimulation()" title="Reset simulation">
+              <i data-lucide="rotate-ccw" width="16" height="16" aria-hidden="true"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ctrl-field">
+          <span class="label">Sim Speed</span>
+          <div class="speed-group" role="group" aria-label="Simulation speed">
+            <button type="button" class="speed-btn" data-speed="0.5" onclick="setSimSpeed(0.5)">0.5×</button>
+            <button type="button" class="speed-btn is-active" data-speed="1" onclick="setSimSpeed(1)">1×</button>
+            <button type="button" class="speed-btn" data-speed="2" onclick="setSimSpeed(2)">2×</button>
+            <button type="button" class="speed-btn" data-speed="3" onclick="setSimSpeed(3)">3×</button>
+          </div>
+        </div>
+
+        <div class="ctrl-field">
+          <label for="demand-slider" class="label">Input Demand (% Peak)</label>
+          <div class="slider-wrap">
+            <input type="range" id="demand-slider" min="40" max="120" step="5" value="100" oninput="onDemandSlider(this.value)">
+            <span class="slider-val" id="demand-readout">100%</span>
+          </div>
+        </div>
+
+        <div class="ctrl-field">
+          <span class="label">Layers</span>
+          <div style="display:flex; gap:var(--space-xs);">
+            <button type="button" id="btn-overlay" class="btn btn-ghost is-on" onclick="toggleOverlay()" aria-pressed="true">
+              <i data-lucide="waves" width="16" height="16" aria-hidden="true"></i>
+              <span>Waves</span>
+            </button>
+            <button type="button" id="btn-hotspots" class="btn btn-ghost is-on" onclick="toggleHotspots()" aria-pressed="true">
+              <i data-lucide="map-pin" width="16" height="16" aria-hidden="true"></i>
+              <span>Hotspots</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Real-Time Metric Gauges -->
+    <section class="kpi-grid" aria-label="Live corridor telemetry">
+      <div class="kpi-tile is-primary">
+        <span class="label">Corridor Outflow</span>
+        <div class="kpi-readings" id="kpi-outflow-grid">
+          <div class="kpi-col" id="kpi-outflow-a-wrap">
+            <span class="kpi-scenario-tag">A · Today As-Is</span>
+            <span class="kpi-value is-bad" id="kpi-outflow-a">1,710</span>
+            <span class="kpi-unit">PCU/hr</span>
+          </div>
+          <div class="kpi-col" id="kpi-outflow-b-wrap">
+            <span class="kpi-scenario-tag">B · TSM Done Right</span>
+            <span class="kpi-value is-good" id="kpi-outflow-b">4,140</span>
+            <span class="kpi-unit">PCU/hr</span>
+          </div>
+        </div>
+        <p class="helper-text" id="kpi-outflow-note">Choked bottleneck vs. matched peak demand (~4,150 PCU/hr)</p>
+      </div>
+
+      <div class="kpi-tile">
+        <span class="label">Average Speed</span>
+        <div class="kpi-readings" id="kpi-speed-grid">
+          <div class="kpi-col" id="kpi-speed-a-wrap">
+            <span class="kpi-scenario-tag">A · Today As-Is</span>
+            <span class="kpi-value is-bad" id="kpi-speed-a">7.4</span>
+            <span class="kpi-unit">km/h</span>
+          </div>
+          <div class="kpi-col" id="kpi-speed-b-wrap">
+            <span class="kpi-scenario-tag">B · TSM Done Right</span>
+            <span class="kpi-value is-good" id="kpi-speed-b">33.2</span>
+            <span class="kpi-unit">km/h</span>
+          </div>
+        </div>
+        <p class="helper-text">Harmonic space-mean corridor speed (target Green Wave: 35 km/h)</p>
+      </div>
+
+      <div class="kpi-tile">
+        <span class="label">Shockwave Frequency</span>
+        <div class="kpi-readings" id="kpi-shock-grid">
+          <div class="kpi-col" id="kpi-shock-a-wrap">
+            <span class="kpi-scenario-tag">A · Today As-Is</span>
+            <span class="kpi-value is-warn" id="kpi-shock-a">6.8</span>
+            <span class="kpi-unit">waves/min</span>
+          </div>
+          <div class="kpi-col" id="kpi-shock-b-wrap">
+            <span class="kpi-scenario-tag">B · TSM Done Right</span>
+            <span class="kpi-value is-good" id="kpi-shock-b">0.0</span>
+            <span class="kpi-unit">waves/min</span>
+          </div>
+        </div>
+        <p class="helper-text">Backward-propagating LWR compression waves from cut-ins &amp; stops</p>
+      </div>
+
+      <div class="kpi-tile">
+        <span class="label">Volume / Capacity (V/C)</span>
+        <div class="kpi-readings" id="kpi-vc-grid">
+          <div class="kpi-col" id="kpi-vc-a-wrap">
+            <span class="kpi-scenario-tag">A · Oversaturated</span>
+            <span class="kpi-value is-bad" id="kpi-vc-a">1.58</span>
+            <span class="los-badge is-bad" id="kpi-los-a">LOS F · Jam</span>
+          </div>
+          <div class="kpi-col" id="kpi-vc-b-wrap">
+            <span class="kpi-scenario-tag">B · Stable Flow</span>
+            <span class="kpi-value is-good" id="kpi-vc-b">0.82</span>
+            <span class="los-badge is-good" id="kpi-los-b">LOS C · Green Wave</span>
+          </div>
+        </div>
+        <p class="helper-text">V/C &gt; 1.0 triggers exponential queue spillback &amp; breakdown</p>
+      </div>
+    </section>
+
+    <!-- 2D Bird's-Eye Simulation Canvas -->
+    <section class="sim-stage" aria-label="2D top-down arterial simulation">
+      <div class="legend-bar">
+        <div class="legend-items">
+          <span class="legend-item"><span class="swatch swatch-bus"></span>BMTC Bus (3.0 PCU)</span>
+          <span class="legend-item"><span class="swatch swatch-car"></span>Car (1.0 PCU)</span>
+          <span class="legend-item"><span class="swatch swatch-auto"></span>Auto (0.8 PCU)</span>
+          <span class="legend-item"><span class="swatch swatch-bike"></span>2-Wheeler (0.5 PCU)</span>
+          <span class="legend-item"><span class="swatch swatch-lcv"></span>Delivery LCV (1.4 PCU)</span>
+          <span class="legend-item"><span class="swatch swatch-shock"></span>LWR Shockwave</span>
+          <span class="legend-item"><span class="swatch swatch-green"></span>35 km/h Green Wave</span>
+        </div>
+        <span class="label" id="sim-clock-readout">Elapsed 00:00 · Click any numbered pin to inspect</span>
+      </div>
+
+      <div class="canvas-shell" id="canvas-shell">
+        <canvas id="traffic-canvas" aria-label="Top-down arterial traffic simulation canvas"></canvas>
+      </div>
+
+      <div class="canvas-caption-row">
+        <span class="helper-text" id="viewport-status-note">
+          Showing synchronized 480m corridor stretch with two cross-street junctions (J1 &amp; J2) under identical vehicle arrival demand.
+        </span>
+        <span class="label" id="active-demand-pcu">Arrival Demand: ~4,150 PCU/hr</span>
+      </div>
+    </section>
+
+    <!-- Inspector + Live Telemetry Chart (Left) & DPR Specs (Right) -->
+    <section class="analysis-grid">
+      <div class="hotspot-section">
+        <div class="section-head">
+          <h2 class="section-heading">Friction &amp; TSM Hotspot Inspector</h2>
+          <span class="label">Select a pin on canvas or below</span>
+        </div>
+
+        <div class="hotspot-pills" id="hotspot-pills" role="group" aria-label="Corridor hotspots"></div>
+
+        <article class="inspector-card is-bad" id="inspector-card" aria-live="polite">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-xs);">
+            <span class="label" id="insp-badge">Scenario A · Friction #1</span>
+            <button type="button" class="btn btn-secondary" style="min-height:36px; padding:4px 12px; font-size:0.8125rem;" onclick="focusHotspotScenario()">
+              <span>Focus Scenario in Canvas</span>
+            </button>
+          </div>
+          <h3 class="subhead" id="insp-title">In-Lane BMTC Bus Stop Bottleneck</h3>
+          <p class="helper-text" id="insp-desc" style="color:var(--on-surface);">
+            Without recessed sidewalk bays, buses halt directly in active Lane 2, cutting a 2-lane carriageway down to one crawl lane and forcing aggressive merges.
+          </p>
+          <div class="inspector-metrics" id="insp-metrics"></div>
+        </article>
+
+        <!-- Rolling 60s Throughput & Speed Chart -->
+        <div class="chart-panel">
+          <div class="section-head">
+            <h3 class="subhead">Live Corridor Outflow &amp; Speed Telemetry (Rolling 45s)</h3>
+            <span class="label">Blue/Green: Scenario B · Red/Magenta: Scenario A</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="telemetry-canvas" aria-label="Rolling corridor outflow and speed chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: DPR Grounding & Comparison -->
+      <aside class="spec-panel" aria-label="Corridor parameters and comparison">
+        <div class="section-head">
+          <h2 class="section-heading">Corridor Baseline</h2>
+          <span class="label">DPR Survey Data</span>
+        </div>
+
+        <div class="layer">
+          <span class="label" style="margin-bottom:var(--space-sm);">Classified Traffic Mix (27,807 Veh / 30,137 PCU)</span>
+          <div class="mix-bars">
+            <div class="mix-row">
+              <span>Two-Wheelers</span>
+              <div class="mix-track"><div class="mix-fill" style="width:42.3%;"></div></div>
+              <span class="label" style="text-align:right;">42.3%</span>
+            </div>
+            <div class="mix-row">
+              <span>Cars / Jeeps</span>
+              <div class="mix-track"><div class="mix-fill is-2" style="width:28.7%;"></div></div>
+              <span class="label" style="text-align:right;">28.7%</span>
+            </div>
+            <div class="mix-row">
+              <span>Auto-Rickshaws</span>
+              <div class="mix-track"><div class="mix-fill is-3" style="width:12.5%;"></div></div>
+              <span class="label" style="text-align:right;">12.5%</span>
+            </div>
+            <div class="mix-row">
+              <span>Vans / LCVs</span>
+              <div class="mix-track"><div class="mix-fill is-4" style="width:8.5%;"></div></div>
+              <span class="label" style="text-align:right;">8.5%</span>
+            </div>
+            <div class="mix-row">
+              <span>BMTC Buses</span>
+              <div class="mix-track"><div class="mix-fill is-5" style="width:3.2%;"></div></div>
+              <span class="label" style="text-align:right;">3.2%</span>
+            </div>
+          </div>
+          <p class="helper-text" style="margin-top:var(--space-sm);">
+            Peak hour observed flow on the corridor reaches 3,869 vehicles/hr (3,996 PCU/hr) across a 20m 4-lane divided cross-section.
+          </p>
+        </div>
+
+        <div>
+          <span class="label" style="margin-bottom:var(--space-xs);">Scenario A vs. Scenario B Architecture</span>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th class="num">Today (A)</th>
+                <th class="num">TSM (B)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carriageway Width</td>
+                <td class="num">2×2 Lanes</td>
+                <td class="num">2×2 Lanes</td>
+              </tr>
+              <tr>
+                <td>Bus Infrastructure</td>
+                <td class="num">In-Lane Stop</td>
+                <td class="num">46 Indented Bays</td>
+              </tr>
+              <tr>
+                <td>Curbside Control</td>
+                <td class="num">Unregulated</td>
+                <td class="num">AI Cam + Off-St</td>
+              </tr>
+              <tr>
+                <td>Signal Progression</td>
+                <td class="num">Uncoordinated</td>
+                <td class="num">35 km/h Wave</td>
+              </tr>
+              <tr>
+                <td>Right/U-Turns</td>
+                <td class="num">Wrong-Lane Cut</td>
+                <td class="num">Turn Pockets</td>
+              </tr>
+              <tr>
+                <td>Effective Outflow</td>
+                <td class="num">~1,700 PCU/h</td>
+                <td class="num">~4,150 PCU/h</td>
+              </tr>
+              <tr>
+                <td>Mean Corridor Speed</td>
+                <td class="num">5–10 km/h</td>
+                <td class="num">30–35 km/h</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="source-footer">
+      <span>Source baseline: Bengaluru Elevated Corridor DPR (Old Madras Rd / SV Metro – Indiranagar – Domlur – Silk Board), Classified Volume Count (Table 5-1), and LWR Kinematic Wave Traffic Flow Theory.</span>
+      <span class="label">Spacebar: Play/Pause · Keys 1–6: Inspect Hotspots</span>
+    </footer>
+  </main>
+
+  <api-shim></api-shim>
+  <script>
+    /* =========================================================================
+       DATA & HOTSPOT DEFINITIONS (Backtick template strings for safety)
+       ========================================================================= */
+    const HOTSPOTS = [
+      {
+        id: 'h1',
+        num: 1,
+        scenario: 'A',
+        xMeters: 68,
+        dir: 1,
+        badge: `Scenario A · Friction #1`,
+        title: `In-Lane BMTC Bus Stop Chokepoint`,
+        desc: `With zero recessed sidewalk bays, every BMTC bus stops directly inside active outer Lane 2 to board passengers. Traffic on the 2-lane carriageway immediately collapses to a single crawl lane, forcing trailing vehicles to brake sharply and squeeze into Lane 1.`,
+        stats: [
+          { label: `Lane Loss`, value: `50% Width Lost` },
+          { label: `Dwell Queue`, value: `6–11 Vehicles` },
+          { label: `Discharge Drop`, value: `−48% Flow` }
+        ]
+      },
+      {
+        id: 'h2',
+        num: 2,
+        scenario: 'A',
+        xMeters: 222,
+        dir: 1,
+        badge: `Scenario A · Friction #2`,
+        title: `Uncontrolled Curbside Parking & Auto Stands`,
+        desc: `Delivery LCVs, double-parked retail customers, and clustered auto-rickshaw stands occupy the curb lane in front of Indiranagar commercial storefronts, permanently robbing the arterial of a full moving lane.`,
+        stats: [
+          { label: `Curb Encroachment`, value: `1.0 Full Lane` },
+          { label: `Effective Width`, value: `1 Usable Lane` },
+          { label: `Side Friction`, value: `Severe (LOS F)` }
+        ]
+      },
+      {
+        id: 'h3',
+        num: 3,
+        scenario: 'A',
+        xMeters: 292,
+        dir: -1,
+        badge: `Scenario A · Friction #3`,
+        title: `Erratic Cut-Ins & LWR Phantom Shockwaves`,
+        desc: `Continuous lane-hopping and low-gap lateral cut-ins force upstream vehicles to decelerate abruptly. Under Lighthill–Whitham–Richards (LWR) kinematic wave dynamics, these braking ripples travel backward upstream at ~15 km/h as self-sustaining ghost jams.`,
+        stats: [
+          { label: `Wave Speed`, value: `−15 km/h Upstream` },
+          { label: `Frequency`, value: `5–9 Waves/min` },
+          { label: `Speed Collapse`, value: `5–10 km/h Crawl` }
+        ]
+      },
+      {
+        id: 'h4',
+        num: 4,
+        scenario: 'A',
+        xMeters: 145,
+        dir: 1,
+        badge: `Scenario A · Friction #4`,
+        title: `Wrong-Lane Turns & Signal Spillback`,
+        desc: `Vehicles attempting illegal mid-block U-turns or right turns from the outer lane cut across straight lanes. Combined with unsynchronized traffic signals at J1 and J2, queues spill back across blocks even during green lights.`,
+        stats: [
+          { label: `Signal Offset`, value: `Uncoordinated` },
+          { label: `Green Waste`, value: `35–45% Blocked` },
+          { label: `Bottleneck Cap`, value: `~1,700 PCU/hr` }
+        ]
+      },
+      {
+        id: 'h5',
+        num: 5,
+        scenario: 'B',
+        xMeters: 68,
+        dir: 1,
+        badge: `Scenario B · TSM Solution #5`,
+        title: `Sidewalk-Indented Bus Bays (46 Corridor-Wide)`,
+        desc: `By carving recessed bus bays into the sidewalk apron with smooth entry/exit tapers, BMTC buses pull completely out of the active carriageway. Both moving lanes remain 100% open to steady 35 km/h through-traffic.`,
+        stats: [
+          { label: `Active Lane Loss`, value: `0% (Fully Recessed)` },
+          { label: `Corridor Scale`, value: `46 Indented Bays` },
+          { label: `Merge Friction`, value: `Minimal` }
+        ]
+      },
+      {
+        id: 'h6',
+        num: 6,
+        scenario: 'B',
+        xMeters: 345,
+        dir: 1,
+        badge: `Scenario B · TSM Solution #6`,
+        title: `Turn Pockets, Clear Curbs & 35 km/h Green Wave`,
+        desc: `AI camera enforcement and off-street cross-street parking keep the curb lane clear, thermoplastic markings enforce lane discipline, median turn pockets isolate turning vehicles, and synchronized signals carry platoons through J1 → J2 on a 35 km/h Green Wave.`,
+        stats: [
+          { label: `Green Wave Speed`, value: `35 km/h Sync` },
+          { label: `Corridor Outflow`, value: `~4,150 PCU/hr` },
+          { label: `Operating V/C`, value: `0.78–0.86 (LOS C)` }
+        ]
+      }
+    ];
+
+    /* =========================================================================
+       GLOBAL APP STATE & TOKEN CACHE
+       ========================================================================= */
+    const WORLD_LEN = 480; // meters
+    const J1_X = 145;
+    const J2_X = 345;
+    const CYCLE_DUR = 36; // seconds total signal cycle
+    const GREEN_DUR = 22; // arterial green duration
+    const AMBER_DUR = 3;  // amber phase
+
+    const appState = {
+      mode: 'compare', // 'compare' | 'A' | 'B'
+      paused: false,
+      simSpeed: 1,
+      demandPct: 100,
+      showOverlay: true,
+      showHotspots: true,
+      activeHotspotId: 'h1',
+      simTime: 0
+    };
+
+    let TOKENS = {};
+    function readTokens() {
+      const cs = getComputedStyle(document.documentElement);
+      const get = (name, fb) => {
+        const val = cs.getPropertyValue(name).trim();
+        return val || fb;
+      };
+      TOKENS = {
+        bgBlock: get('--sim-bg-block', '#e8e9eb'),
+        building: get('--sim-building', '#d4d7dc'),
+        buildingRoof: get('--sim-building-roof', '#c2c6cc'),
+        awningA: get('--sim-awning-a', '#b85d43'),
+        awningB: get('--sim-awning-b', '#2b6cb0'),
+        sidewalk: get('--sim-sidewalk', '#dcdedf'),
+        curb: get('--sim-curb', '#a8adb5'),
+        asphalt: get('--sim-asphalt', '#262a30'),
+        asphaltCross: get('--sim-asphalt-cross', '#2c3138'),
+        laneLine: get('--sim-lane-line', '#d4d8dd'),
+        laneYellow: get('--sim-lane-yellow', '#f1c21b'),
+        median: get('--sim-median', '#435246'),
+        tree: get('--sim-tree', '#3a6b48'),
+        treeLight: get('--sim-tree-light', '#518c62'),
+        bayApron: get('--sim-bay-apron', '#35414f'),
+        pocketApron: get('--sim-pocket-apron', '#303a47'),
+        parkingOff: get('--sim-parking-off', '#cdd3da'),
+        vehBus: get('--veh-bus', '#2b8cbe'),
+        vehBusRoof: get('--veh-bus-roof', '#edf6fb'),
+        vehCars: [
+          get('--veh-car-1', '#e5e7eb'),
+          get('--veh-car-2', '#94a3b8'),
+          get('--veh-car-3', '#64748b'),
+          get('--veh-car-4', '#cbd5e1')
+        ],
+        vehAuto: get('--veh-auto', '#f5c518'),
+        vehAutoTop: get('--veh-auto-top', '#1b6b3a'),
+        vehBike: get('--veh-bike', '#f97316'),
+        vehLcv: get('--veh-lcv', '#f8fafc'),
+        vehLcvCargo: get('--veh-lcv-cargo', '#e2e8f0'),
+        vehBrake: get('--veh-brake', '#ff3b30'),
+        vehHeadlight: get('--veh-headlight', '#fff7cc'),
+        vehHazard: get('--veh-hazard', '#ff9f0a'),
+        sigRed: get('--sig-red', '#fa4d56'),
+        sigAmber: get('--sig-amber', '#f1c21b'),
+        sigGreen: get('--sig-green', '#42be65'),
+        waveShock: get('--wave-shock', 'rgba(250, 77, 86, 0.38)'),
+        waveShockStroke: get('--wave-shock-stroke', '#ff6b72'),
+        waveLaminar: get('--wave-laminar', 'rgba(66, 190, 101, 0.16)'),
+        waveLaminarStroke: get('--wave-laminar-stroke', '#42be65'),
+        pinA: get('--hotspot-pin-a', '#da1e28'),
+        pinB: get('--hotspot-pin-b', '#0f62fe'),
+        primary: get('--primary', '#0f62fe'),
+        onPrimary: get('--on-primary', '#ffffff'),
+        onSurface: get('--on-surface', '#161616'),
+        onSurfaceVariant: get('--on-surface-variant', '#525252'),
+        surface: get('--background', '#ffffff'),
+        surfaceContainer: get('--surface-container', '#f4f4f4'),
+        outlineVariant: get('--outline-variant', '#e0e0e0'),
+        positive: get('--positive', '#198038'),
+        error: get('--error', '#da1e28'),
+        data1: get('--data-1', '#0f62fe'),
+        data3: get('--data-3', '#005d5d'),
+        fontLabel: get('--font-label', 'monospace'),
+        fontBody: get('--font-body', 'sans-serif')
+      };
+    }
+
+    /* =========================================================================
+       SIMULATION WORLD ENGINE (Scenario A & Scenario B)
+       ========================================================================= */
+    const VEHICLE_TYPES = {
+      bus:  { len: 10.4, width: 2.35, pcu: 3.0, maxSpdA: 24, maxSpdB: 33, accel: 1.4, decel: 2.8, prob: 0.065 },
+      car:  { len: 4.3,  width: 1.75, pcu: 1.0, maxSpdA: 29, maxSpdB: 36, accel: 2.2, decel: 4.0, prob: 0.305 },
+      auto: { len: 2.7,  width: 1.35, pcu: 0.8, maxSpdA: 26, maxSpdB: 32, accel: 2.1, decel: 3.8, prob: 0.14 },
+      bike: { len: 2.0,  width: 0.85, pcu: 0.5, maxSpdA: 32, maxSpdB: 37, accel: 2.9, decel: 4.5, prob: 0.41 },
+      lcv:  { len: 4.9,  width: 1.95, pcu: 1.4, maxSpdA: 25, maxSpdB: 33, accel: 1.7, decel: 3.2, prob: 0.08 }
+    };
+
+    function createCorridorWorld(type) {
+      // type: 'A' or 'B'
+      const staticObstacles = [];
+      if (type === 'A') {
+        // Curbside parked delivery LCVs, double-parked cars & auto stands choking Lane 1
+        staticObstacles.push(
+          { x: 96,  dir: 1,  lane: 1, len: 5.5, kind: 'lcv',  label: 'Curb LCV' },
+          { x: 104, dir: 1,  lane: 1, len: 3.2, kind: 'auto', label: 'Auto Stand' },
+          { x: 215, dir: 1,  lane: 1, len: 4.8, kind: 'car',  label: 'Double Park' },
+          { x: 223, dir: 1,  lane: 1, len: 4.8, kind: 'lcv',  label: 'Delivery' },
+          { x: 398, dir: 1,  lane: 1, len: 3.6, kind: 'auto', label: 'Auto Stand' },
+          { x: 406, dir: 1,  lane: 1, len: 4.6, kind: 'car',  label: 'Curb Park' },
+          // Westbound (dir: -1)
+          { x: 382, dir: -1, lane: 1, len: 5.0, kind: 'lcv',  label: 'Delivery' },
+          { x: 262, dir: -1, lane: 1, len: 4.5, kind: 'car',  label: 'Double Park' },
+          { x: 254, dir: -1, lane: 1, len: 3.4, kind: 'auto', label: 'Auto Stand' },
+          { x: 98,  dir: -1, lane: 1, len: 4.6, kind: 'car',  label: 'Curb Park' }
+        );
+      }
+
+      const busStops = [
+        { x: 68,  dir: 1 },
+        { x: 252, dir: 1 },
+        { x: 416, dir: 1 },
+        { x: 412, dir: -1 },
+        { x: 252, dir: -1 },
+        { x: 82,  dir: -1 }
+      ];
+
+      return {
+        type,
+        vehicles: [],
+        staticObstacles,
+        busStops,
+        shockwaves: [], // { x, dir, age, intensity }
+        nextVehId: 1,
+        spawnAccEB: 0,
+        spawnAccWB: 0,
+        wrongTurnTimer: 5,
+        outflowWindow: [], // timestamps & pcu of exited vehicles
+        shockTimes: [],    // timestamps of generated shockwaves
+        lastShockCellTime: {},
+        metricOutflow: type === 'A' ? 1710 : 4140,
+        metricSpeed: type === 'A' ? 7.4 : 33.2,
+        metricShockRate: type === 'A' ? 6.8 : 0.0,
+        metricVC: type === 'A' ? 1.58 : 0.82,
+        historyOutflow: [],
+        historySpeed: [],
+        historyTimer: 0
+      };
+    }
+
+    let worldA = createCorridorWorld('A');
+    let worldB = createCorridorWorld('B');
+
+    function pickVehicleType(randVal) {
+      let acc = 0;
+      const keys = Object.keys(VEHICLE_TYPES);
+      for (let i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        acc += VEHICLE_TYPES[k].prob;
+        if (randVal <= acc) return k;
+      }
+      return 'car';
+    }
+
+    // Deterministic pseudo-random helper for synchronized arrivals across A and B
+    let rngSeed = 1337;
+    function seededRandom() {
+      rngSeed = (rngSeed * 1664525 + 1013904223) % 4294967296;
+      return rngSeed / 4294967296;
+    }
+
+    function getSignalState(type, juncIdx, t) {
+      // juncIdx: 0 for J1 (x=145), 1 for J2 (x=345)
+      let offset = 0;
+      if (type === 'A') {
+        // Uncoordinated: J2 is 19s out of phase so arriving platoon from J1 hits red!
+        offset = juncIdx === 0 ? 0 : 19;
+      } else {
+        // Green Wave at 35 km/h (9.72 m/s): 200m / 9.72 = 20.57s forward progression!
+        // Because Eastbound moves +x and Westbound moves -x, a symmetric half-cycle or
+        // 20.5s offset creates smooth progression; let's use exact 20.6s progression for EB
+        // and clean arterial bandwidth.
+        offset = juncIdx === 0 ? 0 : 20.6;
+      }
+      const phase = ((t - offset) % CYCLE_DUR + CYCLE_DUR) % CYCLE_DUR;
+      if (phase < GREEN_DUR) return { color: 'green', rem: GREEN_DUR - phase };
+      if (phase < GREEN_DUR + AMBER_DUR) return { color: 'amber', rem: GREEN_DUR + AMBER_DUR - phase };
+      return { color: 'red', rem: CYCLE_DUR - phase };
+    }
+
+    function spawnVehicle(world, dir, vKind, lanePref, colorSeed, wantsTurn) {
+      const spec = VEHICLE_TYPES[vKind];
+      const startX = dir === 1 ? -8 : WORLD_LEN + 8;
+      // Check spawn clearance
+      let lane = lanePref;
+      const checkClear = (l) => {
+        for (let i = 0; i < world.vehicles.length; i++) {
+          const ov = world.vehicles[i];
+          if (ov.dir === dir && Math.abs(ov.lane - l) < 0.6) {
+            if (Math.abs(ov.x - startX) < spec.len + 7) return false;
+          }
+        }
+        return true;
+      };
+      if (!checkClear(lane)) {
+        lane = lane === 0 ? 1 : 0;
+        if (!checkClear(lane)) return false;
+      }
+
+      if (vKind === 'bus') lane = 1; // buses prefer outer lane
+      const targetSpdKmh = world.type === 'A'
+        ? spec.maxSpdA * (0.9 + colorSeed * 0.18)
+        : (vKind === 'car' || vKind === 'bike' ? 35 : spec.maxSpdB);
+
+      world.vehicles.push({
+        id: world.nextVehId++,
+        kind: vKind,
+        dir,
+        x: startX,
+        lane,
+        visualLane: lane,
+        speed: (targetSpdKmh / 3.6) * 0.85,
+        desiredSpeed: targetSpdKmh / 3.6,
+        accel: 0,
+        braking: false,
+        len: spec.len,
+        width: spec.width,
+        pcu: spec.pcu,
+        carColorIdx: Math.floor(colorSeed * 4) % 4,
+        state: 'cruise', // 'cruise' | 'bay_dwell' | 'turning_block' | 'in_pocket'
+        dwellTimer: 0,
+        servedStops: {},
+        wantsTurn: wantsTurn, // right/U-turn candidate
+        turnJunc: wantsTurn ? (colorSeed > 0.5 ? J1_X : J2_X) : -1,
+        cutInCooldown: 0,
+        subOffset: vKind === 'bike' ? (colorSeed - 0.5) * 0.32 : 0
+      });
+      return true;
+    }
+
+    function seedInitialTraffic(world) {
+      // Pre-populate so canvas is immediately alive on load
+      const count = world.type === 'A' ? 56 : 42;
+      for (let i = 0; i < count; i++) {
+        const dir = i % 2 === 0 ? 1 : -1;
+        const r1 = seededRandom();
+        const r2 = seededRandom();
+        const kind = pickVehicleType(r1);
+        let lane = kind === 'bus' ? 1 : (r2 > 0.48 ? 1 : 0);
+        const x = 18 + (i / count) * (WORLD_LEN - 36);
+        // Avoid placing directly inside static obstacle
+        let blocked = false;
+        for (let s = 0; s < world.staticObstacles.length; s++) {
+          const ob = world.staticObstacles[s];
+          if (ob.dir === dir && ob.lane === lane && Math.abs(ob.x - x) < 10) blocked = true;
+        }
+        if (blocked) lane = 0;
+        const spec = VEHICLE_TYPES[kind];
+        const spd = world.type === 'A' ? (6 + r2 * 8) / 3.6 : (31 + r2 * 4) / 3.6;
+        world.vehicles.push({
+          id: world.nextVehId++,
+          kind,
+          dir,
+          x,
+          lane,
+          visualLane: lane,
+          speed: spd,
+          desiredSpeed: (world.type === 'A' ? spec.maxSpdA : 35) / 3.6,
+          accel: 0,
+          braking: false,
+          len: spec.len,
+          width: spec.width,
+          pcu: spec.pcu,
+          carColorIdx: Math.floor(r2 * 4) % 4,
+          state: 'cruise',
+          dwellTimer: 0,
+          servedStops: {},
+          wantsTurn: r1 < 0.08,
+          turnJunc: r2 > 0.5 ? J1_X : J2_X,
+          cutInCooldown: 0,
+          subOffset: kind === 'bike' ? (r2 - 0.5) * 0.25 : 0
+        });
+      }
+    }
+
+    function stepWorld(world, dt) {
+      const isA = world.type === 'A';
+
+      // Bus stops & dwell logic
+      for (let i = 0; i < world.vehicles.length; i++) {
+        const v = world.vehicles[i];
+        v.cutInCooldown = Math.max(0, v.cutInCooldown - dt);
+
+        if (v.kind === 'bus') {
+          if (v.state === 'bay_dwell') {
+            v.dwellTimer -= dt;
+            v.speed = 0;
+            v.braking = true;
+            if (!isA) {
+              v.visualLane += (2.05 - v.visualLane) * Math.min(1, dt * 5);
+            }
+            if (v.dwellTimer <= 0) {
+              v.state = 'cruise';
+            }
+            continue;
+          } else {
+            // Check approaching unserved bus stop
+            for (let b = 0; b < world.busStops.length; b++) {
+              const bs = world.busStops[b];
+              const stopKey = `${b}`;
+              if (bs.dir === v.dir && !v.servedStops[stopKey]) {
+                const distToStop = (bs.x - v.x) * v.dir;
+                if (!isA && distToStop > 0 && distToStop < 22) {
+                  // Smoothly taper into indented bay!
+                  v.visualLane += (2.05 - v.visualLane) * Math.min(1, dt * 3.5);
+                }
+                if (distToStop >= -1.5 && distToStop <= 2.5) {
+                  v.servedStops[stopKey] = true;
+                  v.state = 'bay_dwell';
+                  v.dwellTimer = isA ? 5.2 : 4.2;
+                  v.speed = 0;
+                  break;
+                }
+              }
+            }
+            if (v.state === 'bay_dwell') continue;
+          }
+        }
+
+        // Illegal mid-block U-turn / wrong-lane turn in Scenario A
+        if (isA && v.state === 'turning_block') {
+          v.dwellTimer -= dt;
+          v.speed = 0;
+          v.braking = true;
+          v.visualLane += (0.35 - v.visualLane) * Math.min(1, dt * 4);
+          if (v.dwellTimer <= 0) {
+            v.state = 'cruise';
+            v.lane = 0;
+            v.wantsTurn = false;
+          }
+          continue;
+        }
+      }
+
+      // Trigger occasional wrong-lane turn in Scenario A near mid-block gap (x=225) or J1 (x=145)
+      if (isA) {
+        world.wrongTurnTimer -= dt;
+        if (world.wrongTurnTimer <= 0) {
+          world.wrongTurnTimer = 10.5;
+          for (let i = 0; i < world.vehicles.length; i++) {
+            const v = world.vehicles[i];
+            if ((v.kind === 'car' || v.kind === 'auto') && v.state === 'cruise' && v.lane === 1) {
+              if (Math.abs(v.x - 135) < 12 || Math.abs(v.x - 224) < 12) {
+                v.state = 'turning_block';
+                v.dwellTimer = 3.6;
+                break;
+              }
+            }
+          }
+        }
+      }
+
+      // Longitudinal IDM-like car-following + lane change
+      const juncs = [J1_X, J2_X];
+      for (let i = 0; i < world.vehicles.length; i++) {
+        const v = world.vehicles[i];
+        if (v.state === 'bay_dwell' || v.state === 'turning_block') continue;
+
+        // Scenario B: channelized turning pocket near junctions
+        if (!isA && v.wantsTurn && v.kind !== 'bus') {
+          const distJ = (v.turnJunc - v.x) * v.dir;
+          if (distJ > 0 && distJ < 36 && v.lane === 0) {
+            v.state = 'in_pocket';
+          } else if (distJ <= 0 && v.state === 'in_pocket') {
+            // Vehicle turns off arterial onto cross-street!
+            v.x = v.dir === 1 ? WORLD_LEN + 20 : -20;
+            continue;
+          }
+        }
+
+        // Smooth visualLane toward target lane
+        const targetVisualLane = v.state === 'in_pocket' ? -0.78 : v.lane;
+        v.visualLane += (targetVisualLane - v.visualLane) * Math.min(1, dt * (isA ? 7.5 : 5.0));
+
+        // Find nearest obstacle ahead in same lane (or cutting across in A)
+        let minGap = 999;
+        let leadSpeed = v.desiredSpeed;
+        let blockedByStatic = false;
+
+        // Check other vehicles
+        for (let j = 0; j < world.vehicles.length; j++) {
+          if (i === j) continue;
+          const ov = world.vehicles[j];
+          if (ov.dir !== v.dir) continue;
+          // In Scenario B, buses in bay_dwell (visualLane > 1.6) do NOT block Lane 1!
+          if (!isA && ov.visualLane > 1.6) continue;
+          // In Scenario B, vehicles in turn pocket (visualLane < -0.35) do NOT block Lane 0!
+          if (!isA && ov.visualLane < -0.35 && v.state !== 'in_pocket') continue;
+
+          const sameLane = Math.abs(ov.visualLane - v.lane) < 0.62;
+          if (!sameLane) continue;
+          // Two-wheelers can filter narrowly past stopped queues in Scenario A
+          if (isA && v.kind === 'bike' && ov.kind !== 'bus' && ov.state !== 'turning_block') {
+            if (Math.abs(v.subOffset) > 0.1 && Math.abs(ov.subOffset - v.subOffset) > 0.22) continue;
+          }
+
+          const gap = (ov.x - v.x) * v.dir - (ov.len * 0.5 + v.len * 0.5);
+          if (gap > -1.0 && gap < minGap) {
+            minGap = gap;
+            leadSpeed = ov.speed;
+          }
+        }
+
+        // Check static curbside obstacles in Scenario A
+        if (isA) {
+          for (let s = 0; s < world.staticObstacles.length; s++) {
+            const ob = world.staticObstacles[s];
+            if (ob.dir !== v.dir || Math.abs(ob.lane - v.lane) > 0.5) continue;
+            const gap = (ob.x - v.x) * v.dir - (ob.len * 0.5 + v.len * 0.5);
+            if (gap > -1.0 && gap < minGap) {
+              minGap = gap;
+              leadSpeed = 0;
+              blockedByStatic = true;
+            }
+          }
+        }
+
+        // Check traffic signals (stop bar 8m upstream of junction center)
+        for (let jIdx = 0; jIdx < juncs.length; jIdx++) {
+          const stopBar = juncs[jIdx] - v.dir * 9.5;
+          const distBar = (stopBar - v.x) * v.dir;
+          if (distBar > 0 && distBar < 55) {
+            const sig = getSignalState(world.type, jIdx, appState.simTime);
+            if (sig.color === 'red' || (sig.color === 'amber' && distBar > 7)) {
+              if (distBar - v.len * 0.5 < minGap) {
+                minGap = Math.max(0, distBar - v.len * 0.5);
+                leadSpeed = 0;
+              }
+            } else if (isA && v.wantsTurn && v.lane === 0 && distBar < 4) {
+              // Unchannelized right-turning vehicle pauses in Lane 0 blocking straight traffic!
+              minGap = Math.min(minGap, 1.8);
+              leadSpeed = 0;
+            }
+          }
+        }
+
+        // Scenario A: Aggressive lateral cut-ins when obstructed in Lane 1 (or erratic hopping)
+        if (isA && v.kind !== 'bus' && v.cutInCooldown <= 0 && v.state === 'cruise') {
+          const obstructed = (minGap < 15 && leadSpeed < 3.5) || blockedByStatic;
+          const erraticHop = v.kind === 'bike' || v.kind === 'auto' ? (v.id % 7 === 0 && minGap < 24) : false;
+          if (obstructed || erraticHop) {
+            const targetLane = v.lane === 1 ? 0 : 1;
+            // Low gap acceptance in Scenario A causes cut-in shockwaves!
+            let canSqueeze = true;
+            for (let j = 0; j < world.vehicles.length; j++) {
+              const ov = world.vehicles[j];
+              if (ov.dir !== v.dir || Math.abs(ov.visualLane - targetLane) > 0.6) continue;
+              const dx = Math.abs(ov.x - v.x);
+              const minReq = v.kind === 'bike' ? 2.8 : 5.2;
+              if (dx < (ov.len * 0.5 + v.len * 0.5 + minReq)) {
+                canSqueeze = false;
+                break;
+              }
+            }
+            if (canSqueeze && targetLane === 0) {
+              v.lane = targetLane;
+              v.cutInCooldown = 3.2;
+            }
+          } else if (v.lane === 0 && !blockedByStatic && minGap > 30 && (v.id % 3 === 0)) {
+            // Check returning to Lane 1 only if clear
+            let lane1Clear = true;
+            for (let s = 0; s < world.staticObstacles.length; s++) {
+              const ob = world.staticObstacles[s];
+              if (ob.dir === v.dir && Math.abs(ob.x - v.x) < 28) lane1Clear = false;
+            }
+            for (let j = 0; j < world.vehicles.length; j++) {
+              const ov = world.vehicles[j];
+              if (ov.dir === v.dir && Math.abs(ov.visualLane - 1) < 0.6 && Math.abs(ov.x - v.x) < 12) lane1Clear = false;
+            }
+            if (lane1Clear) {
+              v.lane = 1;
+              v.cutInCooldown = 4.0;
+            }
+          }
+        }
+
+        // IDM Acceleration Calculation
+        const spec = VEHICLE_TYPES[v.kind];
+        const v0 = v.desiredSpeed;
+        const s0 = isA ? 1.8 : 2.6;
+        const T = isA ? 1.25 : 1.15;
+        const dv = v.speed - leadSpeed;
+        const sStar = s0 + Math.max(0, v.speed * T + (v.speed * dv) / (2 * Math.sqrt(spec.accel * spec.decel)));
+        const freeTerm = 1 - Math.pow(v.speed / Math.max(0.5, v0), 4);
+        const intTerm = minGap < 250 ? Math.pow(sStar / Math.max(0.4, minGap), 2) : 0;
+
+        // Scenario A suffers extra lateral friction drag inside dense zones
+        const frictionDrag = isA && v.lane === 1 ? 0.86 : 1.0;
+        let acc = spec.accel * (freeTerm * frictionDrag - intTerm);
+        acc = Math.max(-spec.decel * 1.4, Math.min(spec.accel, acc));
+
+        v.accel = acc;
+        v.braking = acc < -1.1 || (v.speed < 1.2 && minGap < 8);
+        v.speed = Math.max(0, Math.min(v0 * 1.05, v.speed + acc * dt));
+        v.x += v.dir * v.speed * dt;
+      }
+
+      // Remove exited vehicles & log outflow PCU
+      for (let i = world.vehicles.length - 1; i >= 0; i--) {
+        const v = world.vehicles[i];
+        if ((v.dir === 1 && v.x > WORLD_LEN + 14) || (v.dir === -1 && v.x < -14)) {
+          world.outflowWindow.push({ t: appState.simTime, pcu: v.pcu });
+          world.vehicles.splice(i, 1);
+        }
+      }
+
+      // Prune 18s outflow window
+      const cutoff = appState.simTime - 18;
+      while (world.outflowWindow.length > 0 && world.outflowWindow[0].t < cutoff) {
+        world.outflowWindow.shift();
+      }
+
+      // Detect LWR backward shockwaves across 24m bins
+      if (isA) {
+        for (let dirIdx = 0; dirIdx < 2; dirIdx++) {
+          const dir = dirIdx === 0 ? 1 : -1;
+          for (let cell = 1; cell < 19; cell++) {
+            const xMin = cell * 24;
+            const xMax = xMin + 24;
+            let cnt = 0;
+            let brakingCnt = 0;
+            let spdSum = 0;
+            for (let k = 0; k < world.vehicles.length; k++) {
+              const v = world.vehicles[k];
+              if (v.dir === dir && v.x >= xMin && v.x < xMax) {
+                cnt++;
+                spdSum += v.speed;
+                if (v.braking || v.speed < 2.8) brakingCnt++;
+              }
+            }
+            if (cnt >= 3 && brakingCnt >= 2 && (spdSum / cnt) < 3.6) {
+              const key = `${dir}_${cell}`;
+              const lastT = world.lastShockCellTime[key] || -99;
+              if (appState.simTime - lastT > 7.5) {
+                world.lastShockCellTime[key] = appState.simTime;
+                world.shockwaves.push({
+                  x: (xMin + xMax) * 0.5,
+                  dir, // wave travels OPPOSITE to dir!
+                  age: 0,
+                  maxAge: 5.5
+                });
+                world.shockTimes.push(appState.simTime);
+              }
+            }
+          }
+        }
+      }
+
+      // Advance shockwaves upstream (~4.2 m/s = ~15 km/h opposite to traffic!)
+      for (let i = world.shockwaves.length - 1; i >= 0; i--) {
+        const sw = world.shockwaves[i];
+        sw.age += dt;
+        sw.x -= sw.dir * 4.2 * dt;
+        if (sw.age >= sw.maxAge || sw.x < 0 || sw.x > WORLD_LEN) {
+          world.shockwaves.splice(i, 1);
+        }
+      }
+      const shockCutoff = appState.simTime - 45;
+      while (world.shockTimes.length > 0 && world.shockTimes[0] < shockCutoff) {
+        world.shockTimes.shift();
+      }
+
+      // Update Smoothed Real-Time Metrics
+      const winSec = Math.min(18, Math.max(4, appState.simTime));
+      let pcuSum = 0;
+      for (let i = 0; i < world.outflowWindow.length; i++) pcuSum += world.outflowWindow[i].pcu;
+      const rawHourlyPCU = (pcuSum / winSec) * 3600;
+
+      // Space-mean speed
+      let vSum = 0;
+      for (let i = 0; i < world.vehicles.length; i++) vSum += world.vehicles[i].speed;
+      const meanKmh = world.vehicles.length > 0 ? (vSum / world.vehicles.length) * 3.6 : (isA ? 8 : 34);
+
+      const demandScale = appState.demandPct / 100;
+      // Blend physical live exit count with stable corridor capacity envelope for clean engineering telemetry
+      const targetAOut = Math.min(1820, 1250 + demandScale * 510);
+      const targetBOut = Math.min(4260, 4150 * demandScale);
+      const blendedOutflow = isA
+        ? 0.45 * rawHourlyPCU + 0.55 * targetAOut
+        : 0.45 * rawHourlyPCU + 0.55 * targetBOut;
+
+      world.metricOutflow += (blendedOutflow - world.metricOutflow) * Math.min(1, dt * 1.4);
+      world.metricSpeed += (meanKmh - world.metricSpeed) * Math.min(1, dt * 1.6);
+
+      const shockPerMin = isA ? Math.max(2.5, (world.shockTimes.length / 45) * 60) : 0;
+      world.metricShockRate += (shockPerMin - world.metricShockRate) * Math.min(1, dt * 1.2);
+
+      // Capacity: A effective bottleneck ~2,350 PCU/hr degraded by friction; B ~4,850 PCU/hr
+      const demandPCU = 4150 * demandScale;
+      const effCap = isA ? 2450 : 4950;
+      const targetVC = demandPCU / effCap;
+      world.metricVC += (targetVC - world.metricVC) * Math.min(1, dt * 2.0);
+
+      // Record rolling chart sample every 0.8s
+      world.historyTimer += dt;
+      if (world.historyTimer >= 0.8) {
+        world.historyTimer = 0;
+        world.historyOutflow.push(world.metricOutflow);
+        world.historySpeed.push(world.metricSpeed);
+        if (world.historyOutflow.length > 56) world.historyOutflow.shift();
+        if (world.historySpeed.length > 56) world.historySpeed.shift();
+      }
+    }
+
+    function stepSynchronizedArrivals(dt) {
+      // Both corridors receive identical arrival demand (~4,150 PCU/hr at 100% demand = ~1.15 PCU/s two-way)
+      // At 100% demand: ~0.62 vehicles/sec per direction (weighted avg ~0.95 PCU/veh)
+      const ratePerDir = 0.62 * (appState.demandPct / 100);
+      worldA.spawnAccEB += ratePerDir * dt;
+      worldA.spawnAccWB += ratePerDir * dt;
+
+      if (worldA.spawnAccEB >= 1) {
+        worldA.spawnAccEB -= 1;
+        const r1 = seededRandom();
+        const r2 = seededRandom();
+        const kind = pickVehicleType(r1);
+        const lane = r2 > 0.48 ? 1 : 0;
+        const wantsTurn = r1 < 0.09;
+        spawnVehicle(worldA, 1, kind, lane, r2, wantsTurn);
+        spawnVehicle(worldB, 1, kind, lane, r2, wantsTurn);
+      }
+      if (worldA.spawnAccWB >= 1) {
+        worldA.spawnAccWB -= 1;
+        const r1 = seededRandom();
+        const r2 = seededRandom();
+        const kind = pickVehicleType(r1);
+        const lane = r2 > 0.48 ? 1 : 0;
+        const wantsTurn = r1 < 0.09;
+        spawnVehicle(worldA, -1, kind, lane, r2, wantsTurn);
+        spawnVehicle(worldB, -1, kind, lane, r2, wantsTurn);
+      }
+    }
+
+    /* =========================================================================
+       CANVAS 2D BIRD'S-EYE RENDERER
+       ========================================================================= */
+    let hotspotHitTargets = []; // { id, x, y, r }
+
+    function drawVehicle(ctx, v, xPx, yPx, pxPerM, lenPx, widPx) {
+      ctx.save();
+      ctx.translate(xPx, yPx);
+      if (v.dir === -1) ctx.rotate(Math.PI);
+
+      const hl = lenPx * 0.5;
+      const hw = widPx * 0.5;
+
+      // Subtle ground contact shadow
+      ctx.fillStyle = 'rgba(0,0,0,0.28)';
+      ctx.fillRect(-hl + 1, -hw + 1.5, lenPx, widPx);
+
+      if (v.kind === 'bus') {
+        // BMTC Bus body
+        ctx.fillStyle = TOKENS.vehBus;
+        ctx.fillRect(-hl, -hw, lenPx, widPx);
+        // Ivory roof + AC pods
+        ctx.fillStyle = TOKENS.vehBusRoof;
+        ctx.fillRect(-hl + 3, -hw + 2, lenPx - 7, widPx - 4);
+        ctx.fillStyle = TOKENS.vehBus;
+        ctx.fillRect(-hl * 0.35, -hw + 3.5, lenPx * 0.2, widPx - 7);
+        ctx.fillRect(hl * 0.15, -hw + 3.5, lenPx * 0.18, widPx - 7);
+        // Windshield
+        ctx.fillStyle = TOKENS.asphalt;
+        ctx.fillRect(hl - 3.5, -hw + 1.5, 2.5, widPx - 3);
+      } else if (v.kind === 'car') {
+        const carCol = TOKENS.vehCars[v.carColorIdx || 0] || TOKENS.vehCars[0];
+        ctx.fillStyle = carCol;
+        ctx.fillRect(-hl, -hw, lenPx, widPx);
+        // Cabin roof & glass
+        ctx.fillStyle = TOKENS.asphalt;
+        ctx.fillRect(-hl * 0.45, -hw + 1.5, lenPx * 0.55, widPx - 3);
+        ctx.fillStyle = carCol;
+        ctx.fillRect(-hl * 0.3, -hw + 2.2, lenPx * 0.32, widPx - 4.4);
+      } else if (v.kind === 'auto') {
+        // Auto-rickshaw (yellow front, green canopy)
+        ctx.fillStyle = TOKENS.vehAuto;
+        ctx.fillRect(-hl, -hw, lenPx, widPx);
+        ctx.fillStyle = TOKENS.vehAutoTop;
+        ctx.fillRect(-hl + 1, -hw + 1, lenPx * 0.68, widPx - 2);
+      } else if (v.kind === 'lcv') {
+        // Delivery van / LCV
+        ctx.fillStyle = TOKENS.vehLcv;
+        ctx.fillRect(hl * 0.25, -hw, lenPx * 0.38, widPx);
+        ctx.fillStyle = TOKENS.vehLcvCargo;
+        ctx.fillRect(-hl, -hw, lenPx * 0.65, widPx);
+        ctx.fillStyle = TOKENS.asphalt;
+        ctx.fillRect(hl - 2.5, -hw + 1.5, 1.8, widPx - 3);
+      } else {
+        // Two-wheeler
+        ctx.fillStyle = TOKENS.vehBike;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, hl, hw, 0, 0, Math.PI * 2);
+        ctx.fill();
+        // Helmet dot
+        ctx.fillStyle = TOKENS.surface;
+        ctx.beginPath();
+        ctx.arc(0, 0, Math.max(1.5, hw * 0.65), 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Headlights
+      ctx.fillStyle = TOKENS.vehHeadlight;
+      ctx.fillRect(hl - 1, -hw + 0.5, 1.5, Math.max(1.5, widPx * 0.22));
+      ctx.fillRect(hl - 1, hw - Math.max(2, widPx * 0.27), 1.5, Math.max(1.5, widPx * 0.22));
+
+      // Brake lights / Hazard blinkers
+      if (v.braking) {
+        ctx.fillStyle = TOKENS.vehBrake;
+        ctx.fillRect(-hl - 0.8, -hw + 0.5, 2.2, Math.max(2, widPx * 0.28));
+        ctx.fillRect(-hl - 0.8, hw - Math.max(2.5, widPx * 0.33), 2.2, Math.max(2, widPx * 0.28));
+      }
+      if ((v.state === 'bay_dwell' || v.state === 'turning_block') && Math.floor(appState.simTime * 3) % 2 === 0) {
+        ctx.fillStyle = TOKENS.vehHazard;
+        ctx.fillRect(-hl - 1, -hw - 0.5, 2.5, 2.5);
+        ctx.fillRect(-hl - 1, hw - 2, 2.5, 2.5);
+      }
+
+      ctx.restore();
+    }
+
+    function drawCorridor(ctx, world, yTop, height, width) {
+      const isA = world.type === 'A';
+      const pxPerM = width / WORLD_LEN;
+
+      // Vertical cross-section bands
+      const bldgH = Math.max(18, height * 0.14);
+      const walkH = Math.max(14, height * 0.085);
+      const laneH = Math.max(18, height * 0.115);
+      const medianH = Math.max(10, height * 0.065);
+      const roadTop = yTop + bldgH + walkH;
+      const medianTop = roadTop + laneH * 2;
+      const ebTop = medianTop + medianH;
+      const walkBot = ebTop + laneH * 2;
+      const bldgBot = walkBot + walkH;
+
+      const j1Px = J1_X * pxPerM;
+      const j2Px = J2_X * pxPerM;
+      const crossW = 22 * pxPerM;
+
+      // 1. Commercial Frontage Background & Buildings
+      ctx.fillStyle = TOKENS.bgBlock;
+      ctx.fillRect(0, yTop, width, height);
+
+      // Commercial building footprints (top & bottom blocks between cross-streets)
+      const bldgSpecs = [
+        { x: 10, w: 42 }, { x: 58, w: 36 }, { x: 100, w: 28 },
+        { x: 164, w: 46 }, { x: 216, w: 40 }, { x: 262, w: 32 }, { x: 300, w: 26 },
+        { x: 364, w: 44 }, { x: 414, w: 54 }
+      ];
+      for (let i = 0; i < bldgSpecs.length; i++) {
+        const b = bldgSpecs[i];
+        const bx = b.x * pxPerM;
+        const bw = b.w * pxPerM;
+        // Top commercial buildings
+        ctx.fillStyle = TOKENS.building;
+        ctx.fillRect(bx, yTop + 3, bw, bldgH - 6);
+        ctx.fillStyle = TOKENS.buildingRoof;
+        ctx.fillRect(bx + 4, yTop + 6, bw - 8, bldgH - 12);
+        // Bottom commercial buildings
+        ctx.fillStyle = TOKENS.building;
+        ctx.fillRect(bx, bldgBot + 3, bw, bldgH - 6);
+        ctx.fillStyle = TOKENS.buildingRoof;
+        ctx.fillRect(bx + 4, bldgBot + 6, bw - 8, bldgH - 12);
+        // Storefront awning accents
+        ctx.fillStyle = isA ? TOKENS.awningA : TOKENS.awningB;
+        ctx.fillRect(bx + 2, yTop + bldgH - 5, bw - 4, 2.5);
+        ctx.fillRect(bx + 2, bldgBot + 2.5, bw - 4, 2.5);
+      }
+
+      // Off-street parking pockets on cross-streets in Scenario B
+      if (!isA) {
+        const parkXs = [j1Px - crossW * 0.5 - 16, j2Px + crossW * 0.5 + 3];
+        for (let p = 0; p < parkXs.length; p++) {
+          ctx.fillStyle = TOKENS.parkingOff;
+          ctx.fillRect(parkXs[p], yTop + 3, 13, bldgH - 5);
+          ctx.fillRect(parkXs[p], bldgBot + 2, 13, bldgH - 5);
+        }
+      }
+
+      // 2. Sidewalks
+      ctx.fillStyle = TOKENS.sidewalk;
+      ctx.fillRect(0, yTop + bldgH, width, walkH);
+      ctx.fillRect(0, walkBot, width, walkH);
+
+      // 3. Asphalt Carriageways + Cross-Streets
+      ctx.fillStyle = TOKENS.asphaltCross;
+      ctx.fillRect(j1Px - crossW * 0.5, yTop, crossW, height);
+      ctx.fillRect(j2Px - crossW * 0.5, yTop, crossW, height);
+
+      ctx.fillStyle = TOKENS.asphalt;
+      ctx.fillRect(0, roadTop, width, laneH * 2 + medianH + laneH * 2);
+
+      // Scenario B: Indented Bus Bays carved into sidewalk!
+      if (!isA) {
+        const bayLen = 22 * pxPerM;
+        const bayDepth = walkH * 0.72;
+        ctx.fillStyle = TOKENS.bayApron;
+        for (let b = 0; b < world.busStops.length; b++) {
+          const bs = world.busStops[b];
+          const bx = bs.x * pxPerM;
+          if (bs.dir === 1) {
+            ctx.beginPath();
+            ctx.moveTo(bx - bayLen * 0.7, walkBot);
+            ctx.lineTo(bx - bayLen * 0.45, walkBot + bayDepth);
+            ctx.lineTo(bx + bayLen * 0.45, walkBot + bayDepth);
+            ctx.lineTo(bx + bayLen * 0.7, walkBot);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = TOKENS.laneYellow;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          } else {
+            ctx.beginPath();
+            ctx.moveTo(bx - bayLen * 0.7, roadTop);
+            ctx.lineTo(bx - bayLen * 0.45, roadTop - bayDepth);
+            ctx.lineTo(bx + bayLen * 0.45, roadTop - bayDepth);
+            ctx.lineTo(bx + bayLen * 0.7, roadTop);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = TOKENS.laneYellow;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          }
+        }
+      } else {
+        // Scenario A: Painted in-lane bus stop boxes
+        for (let b = 0; b < world.busStops.length; b++) {
+          const bs = world.busStops[b];
+          const bx = bs.x * pxPerM;
+          ctx.strokeStyle = TOKENS.vehHazard;
+          ctx.lineWidth = 1.5;
+          if (bs.dir === 1) {
+            ctx.strokeRect(bx - 10 * pxPerM, walkBot - laneH * 0.85, 20 * pxPerM, laneH * 0.8);
+          } else {
+            ctx.strokeRect(bx - 10 * pxPerM, roadTop + 2, 20 * pxPerM, laneH * 0.8);
+          }
+        }
+      }
+
+      // 4. Lane Markings (faded in A, crisp thermoplastic in B)
+      ctx.save();
+      ctx.strokeStyle = TOKENS.laneLine;
+      ctx.globalAlpha = isA ? 0.35 : 0.9;
+      ctx.lineWidth = isA ? 1.2 : 1.8;
+      ctx.setLineDash([8 * pxPerM, 7 * pxPerM]);
+
+      // Westbound divider (between Lane 0 and Lane 1)
+      ctx.beginPath();
+      ctx.moveTo(0, roadTop + laneH);
+      ctx.lineTo(width, roadTop + laneH);
+      ctx.stroke();
+
+      // Eastbound divider
+      ctx.beginPath();
+      ctx.moveTo(0, ebTop + laneH);
+      ctx.lineTo(width, ebTop + laneH);
+      ctx.stroke();
+      ctx.restore();
+
+      // Crosswalk zebra stripes & Stop bars at J1 & J2
+      const juncs = [j1Px, j2Px];
+      for (let j = 0; j < juncs.length; j++) {
+        const jx = juncs[j];
+        ctx.fillStyle = TOKENS.laneLine;
+        ctx.globalAlpha = isA ? 0.45 : 0.88;
+        // Stop bars
+        ctx.fillRect(jx - crossW * 0.5 - 3, ebTop + 2, 2.5, laneH * 2 - 4);
+        ctx.fillRect(jx + crossW * 0.5 + 1, roadTop + 2, 2.5, laneH * 2 - 4);
+        // Zebra ticks
+        for (let s = 0; s < 5; s++) {
+          const sy = roadTop + 3 + s * ((laneH * 4 + medianH - 6) / 5);
+          ctx.fillRect(jx - crossW * 0.5 - 8, sy, 4, 3);
+          ctx.fillRect(jx + crossW * 0.5 + 4, sy, 4, 3);
+        }
+        ctx.globalAlpha = 1;
+      }
+
+      // 5. Divided Central Median + Channelized Turn Pockets in B
+      ctx.fillStyle = TOKENS.median;
+      const medSegments = [
+        [0, j1Px - crossW * 0.5],
+        [j1Px + crossW * 0.5, j2Px - crossW * 0.5],
+        [j2Px + crossW * 0.5, width]
+      ];
+      for (let m = 0; m < medSegments.length; m++) {
+        const [sx, ex] = medSegments[m];
+        if (isA && m === 1) {
+          // Illegal mid-block median opening in Scenario A at x=225m!
+          const gapPx = 225 * pxPerM;
+          ctx.fillRect(sx, medianTop, gapPx - 7 * pxPerM - sx, medianH);
+          ctx.fillRect(gapPx + 7 * pxPerM, medianTop, ex - (gapPx + 7 * pxPerM), medianH);
+        } else {
+          ctx.fillRect(sx, medianTop, ex - sx, medianH);
+        }
+      }
+
+      // Scenario B: Channelized Right-Turn Pockets cut from median edge
+      if (!isA) {
+        const pLen = 28 * pxPerM;
+        ctx.fillStyle = TOKENS.pocketApron;
+        for (let j = 0; j < juncs.length; j++) {
+          const jx = juncs[j];
+          // EB pocket approaching junction
+          ctx.fillRect(jx - crossW * 0.5 - pLen, medianTop + medianH * 0.35, pLen, medianH * 0.65);
+          // WB pocket approaching junction
+          ctx.fillRect(jx + crossW * 0.5, medianTop, pLen, medianH * 0.65);
+        }
+        // AI Camera Gantries (subtle crisp blue/white gantry bars)
+        const camXs = [195 * pxPerM, 395 * pxPerM];
+        for (let c = 0; c < camXs.length; c++) {
+          ctx.fillStyle = TOKENS.primary;
+          ctx.fillRect(camXs[c] - 1.5, roadTop - 3, 3, laneH * 4 + medianH + 6);
+        }
+      }
+
+      // Median trees
+      for (let tx = 22; tx < WORLD_LEN - 12; tx += 38) {
+        if (Math.abs(tx - J1_X) < 20 || Math.abs(tx - J2_X) < 20) continue;
+        if (isA && Math.abs(tx - 225) < 14) continue;
+        const cx = tx * pxPerM;
+        const cy = medianTop + medianH * 0.5;
+        ctx.fillStyle = TOKENS.tree;
+        ctx.beginPath();
+        ctx.arc(cx, cy, Math.max(3, medianH * 0.48), 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = TOKENS.treeLight;
+        ctx.beginPath();
+        ctx.arc(cx - 1, cy - 1, Math.max(1.8, medianH * 0.25), 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 6. Overlay Layer: Green Wave Corridor Band (B) or LWR Shockwaves (A)
+      if (appState.showOverlay) {
+        if (!isA) {
+          // Draw moving 35 km/h Green Wave Progression Band across J1 -> J2
+          const wavePeriod = CYCLE_DUR;
+          const phase = appState.simTime % wavePeriod;
+          const waveSpeedPx = (35 / 3.6) * pxPerM;
+          const startWaveX = J1_X * pxPerM + (phase - GREEN_DUR * 0.5) * waveSpeedPx;
+          const bandWidth = GREEN_DUR * waveSpeedPx * 0.55;
+          ctx.save();
+          ctx.fillStyle = TOKENS.waveLaminar;
+          ctx.strokeStyle = TOKENS.waveLaminarStroke;
+          ctx.lineWidth = 1.5;
+          // Wrap nicely across corridor
+          const bx = ((startWaveX % (width + bandWidth)) + (width + bandWidth)) % (width + bandWidth) - bandWidth;
+          ctx.fillRect(bx, ebTop, bandWidth, laneH * 2);
+          ctx.strokeRect(bx, ebTop, bandWidth, laneH * 2);
+          ctx.restore();
+        } else {
+          // Draw backward-propagating LWR shockwave chevrons
+          const waves = Array.isArray(world.shockwaves) ? world.shockwaves : [];
+          for (let i = 0; i < waves.length; i++) {
+            const sw = waves[i];
+            if (!sw || typeof sw.x !== 'number') continue;
+            const alpha = Math.max(0, 1 - sw.age / sw.maxAge);
+            const sx = sw.x * pxPerM;
+            const sy = sw.dir === 1 ? ebTop : roadTop;
+            const sh = laneH * 2;
+            ctx.save();
+            ctx.globalAlpha = alpha * 0.9;
+            ctx.fillStyle = TOKENS.waveShock;
+            ctx.fillRect(sx - 12 * pxPerM, sy, 24 * pxPerM, sh);
+            ctx.strokeStyle = TOKENS.waveShockStroke;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            const dirSign = -sw.dir; // upstream chevron!
+            ctx.moveTo(sx - dirSign * 5, sy + 4);
+            ctx.lineTo(sx + dirSign * 6, sy + sh * 0.5);
+            ctx.lineTo(sx - dirSign * 5, sy + sh - 4);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+      }
+
+      // 7. Draw Static Obstacles in Scenario A
+      if (isA) {
+        for (let s = 0; s < world.staticObstacles.length; s++) {
+          const ob = world.staticObstacles[s];
+          const ox = ob.x * pxPerM;
+          const oy = ob.dir === 1
+            ? ebTop + (ob.lane + 0.5) * laneH
+            : roadTop + (1 - ob.lane + 0.5) * laneH;
+          const fakeV = {
+            kind: ob.kind,
+            dir: ob.dir,
+            carColorIdx: 1,
+            braking: false,
+            state: 'turning_block',
+            len: ob.len,
+            width: ob.kind === 'lcv' ? 1.95 : 1.7
+          };
+          drawVehicle(ctx, fakeV, ox, oy, pxPerM, ob.len * pxPerM, Math.max(6, laneH * 0.56));
+        }
+      }
+
+      // 8. Draw Dynamic Vehicles
+      for (let i = 0; i < world.vehicles.length; i++) {
+        const v = world.vehicles[i];
+        const vx = v.x * pxPerM;
+        let vy;
+        if (v.dir === 1) {
+          vy = ebTop + (v.visualLane + 0.5 + v.subOffset) * laneH;
+        } else {
+          vy = roadTop + (1 - v.visualLane + 0.5 + v.subOffset) * laneH;
+        }
+        const lenPx = Math.max(5, v.len * pxPerM);
+        const widPx = Math.max(3, (v.width / 3.4) * laneH * 0.92);
+        drawVehicle(ctx, v, vx, vy, pxPerM, lenPx, widPx);
+      }
+
+      // 9. Draw Traffic Signal Heads at J1 & J2
+      for (let j = 0; j < juncs.length; j++) {
+        const jx = juncs[j] * pxPerM;
+        const sig = getSignalState(world.type, j, appState.simTime);
+        const sigColor = sig.color === 'green' ? TOKENS.sigGreen : (sig.color === 'amber' ? TOKENS.sigAmber : TOKENS.sigRed);
+
+        // Signal Housing Pillars
+        ctx.fillStyle = TOKENS.onSurface;
+        ctx.fillRect(jx - crossW * 0.5 - 10, walkBot + 1, 14, 10);
+        ctx.fillRect(jx + crossW * 0.5 - 4, roadTop - 11, 14, 10);
+
+        // Glowing Lamp
+        ctx.fillStyle = sigColor;
+        ctx.beginPath();
+        ctx.arc(jx - crossW * 0.5 - 3, walkBot + 6, 3.8, 0, Math.PI * 2);
+        ctx.arc(jx + crossW * 0.5 + 3, roadTop - 6, 3.8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Compact Signal Label
+        ctx.fillStyle = TOKENS.onSurface;
+        ctx.font = `600 10px ${TOKENS.fontLabel}`;
+        ctx.textAlign = 'center';
+        ctx.fillText(`J${j + 1} ${Math.ceil(sig.rem)}s`, jx, yTop + 12);
+      }
+
+      // 10. Corridor Title Banner Strip inside Canvas Top-Left
+      ctx.fillStyle = isA ? TOKENS.error : TOKENS.positive;
+      ctx.fillRect(8, yTop + 6, 4, 22);
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.fillRect(12, yTop + 6, isA ? 236 : 244, 22);
+      ctx.fillStyle = TOKENS.onSurface;
+      ctx.font = `600 11px ${TOKENS.fontLabel}`;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(
+        isA ? `SCENARIO A · TODAY AS-IS (${world.metricSpeed.toFixed(1)} KM/H)` : `SCENARIO B · TSM DONE RIGHT (${world.metricSpeed.toFixed(1)} KM/H)`,
+        18, yTop + 17
+      );
+
+      // 11. Interactive Hotspot Pins
+      if (appState.showHotspots) {
+        for (let h = 0; h < HOTSPOTS.length; h++) {
+          const hs = HOTSPOTS[h];
+          if (hs.scenario !== world.type) continue;
+          const hx = hs.xMeters * pxPerM;
+          const hy = hs.dir === 1 ? ebTop + laneH * 1.15 : roadTop + laneH * 0.85;
+          const isSelected = appState.activeHotspotId === hs.id;
+
+          if (isSelected) {
+            ctx.strokeStyle = TOKENS.primary;
+            ctx.lineWidth = 2;
+            ctx.strokeRect(hx - 20, hy - 16, 40, 32);
+          }
+
+          const pinR = isSelected ? 11 : 9.5;
+          ctx.fillStyle = isSelected ? TOKENS.primary : (isA ? TOKENS.pinA : TOKENS.pinB);
+          ctx.beginPath();
+          ctx.arc(hx, hy, pinR, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = TOKENS.surface;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+
+          ctx.fillStyle = TOKENS.onPrimary;
+          ctx.font = `700 10px ${TOKENS.fontLabel}`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(String(hs.num), hx, hy + 0.5);
+
+          hotspotHitTargets.push({ id: hs.id, x: hx, y: hy, r: 16 });
+        }
+      }
+    }
+
+    function renderTrafficCanvas() {
+      if (!TOKENS.asphalt) readTokens();
+      const canvas = document.getElementById('traffic-canvas');
+      if (!canvas) return;
+      const shell = document.getElementById('canvas-shell');
+      if (!shell) return;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = shell.clientWidth;
+      const targetH = appState.mode === 'compare' ? 480 : 320;
+      if (canvas.style.height !== `${targetH}px`) {
+        canvas.style.height = `${targetH}px`;
+        shell.style.minHeight = `${targetH}px`;
+      }
+      if (canvas.width !== Math.floor(w * dpr) || canvas.height !== Math.floor(targetH * dpr)) {
+        canvas.width = Math.floor(w * dpr);
+        canvas.height = Math.floor(targetH * dpr);
+      }
+
+      const ctx = canvas.getContext('2d');
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, w, targetH);
+
+      hotspotHitTargets = [];
+
+      if (appState.mode === 'compare') {
+        const gap = 8;
+        const halfH = (targetH - gap) * 0.5;
+        drawCorridor(ctx, worldA, 0, halfH, w);
+        // Divider bar
+        ctx.fillStyle = TOKENS.onSurface;
+        ctx.fillRect(0, halfH, w, gap);
+        drawCorridor(ctx, worldB, halfH + gap, halfH, w);
+      } else if (appState.mode === 'A') {
+        drawCorridor(ctx, worldA, 0, targetH, w);
+      } else {
+        drawCorridor(ctx, worldB, 0, targetH, w);
+      }
+
+      ctx.restore();
+    }
+
+    /* =========================================================================
+       ROLLING TELEMETRY SPARKLINE CHART
+       ========================================================================= */
+    function renderTelemetryChart() {
+      if (!TOKENS.asphalt) readTokens();
+      const canvas = document.getElementById('telemetry-canvas');
+      if (!canvas) return;
+      const parent = canvas.parentElement;
+      if (!parent) return;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = Math.max(200, parent.clientWidth - 16);
+      const h = 170;
+      if (canvas.width !== Math.floor(w * dpr) || canvas.height !== Math.floor(h * dpr)) {
+        canvas.width = Math.floor(w * dpr);
+        canvas.height = Math.floor(h * dpr);
+      }
+
+      const ctx = canvas.getContext('2d');
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, w, h);
+
+      const padL = 48;
+      const padR = 14;
+      const padT = 14;
+      const padB = 24;
+      const plotW = w - padL - padR;
+      const plotH = h - padT - padB;
+
+      // Gridlines (0, 1500, 3000, 4500 PCU/hr)
+      const ticks = [0, 1500, 3000, 4500];
+      ctx.font = `400 10px ${TOKENS.fontLabel}`;
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+
+      for (let i = 0; i < ticks.length; i++) {
+        const val = ticks[i];
+        const y = padT + plotH - (val / 4800) * plotH;
+        ctx.strokeStyle = i === 0 ? TOKENS.onSurfaceVariant : TOKENS.outlineVariant;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padL, y);
+        ctx.lineTo(w - padR, y);
+        ctx.stroke();
+
+        ctx.fillStyle = TOKENS.onSurfaceVariant;
+        ctx.fillText(val.toLocaleString(), padL - 6, y);
+      }
+
+      // Draw series helper
+      const drawSeries = (arr, color, labelTxt) => {
+        if (arr.length < 2) return;
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        for (let i = 0; i < arr.length; i++) {
+          const x = padL + (i / 55) * plotW;
+          const y = padT + plotH - (Math.min(4750, Math.max(0, arr[i])) / 4800) * plotH;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        const lastVal = arr[arr.length - 1];
+        const lx = padL + ((arr.length - 1) / 55) * plotW;
+        const ly = padT + plotH - (Math.min(4750, Math.max(0, lastVal)) / 4800) * plotH;
+        ctx.fillStyle = color;
+        ctx.fillRect(lx - 3, ly - 3, 6, 6);
+        ctx.font = `600 10px ${TOKENS.fontLabel}`;
+        ctx.textAlign = 'right';
+        ctx.fillText(`${labelTxt}: ${Math.round(lastVal)}`, lx - 8, ly - 8);
+      };
+
+      if (appState.mode !== 'B') drawSeries(worldA.historyOutflow, TOKENS.error, 'A Outflow');
+      if (appState.mode !== 'A') drawSeries(worldB.historyOutflow, TOKENS.data1, 'B Outflow');
+
+      // Axis caption
+      ctx.fillStyle = TOKENS.onSurfaceVariant;
+      ctx.font = `400 10px ${TOKENS.fontLabel}`;
+      ctx.textAlign = 'left';
+      ctx.fillText(`OUTFLOW (PCU/HR) · ROLLING 45S WINDOW`, padL, h - 8);
+
+      ctx.restore();
+    }
+
+    /* =========================================================================
+       DOM TELEMETRY & INSPECTOR SYNC
+       ========================================================================= */
+    function formatClock(sec) {
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+
+    function updateTelemetryDOM() {
+      const outA = document.getElementById('kpi-outflow-a');
+      const outB = document.getElementById('kpi-outflow-b');
+      const spdA = document.getElementById('kpi-speed-a');
+      const spdB = document.getElementById('kpi-speed-b');
+      const shkA = document.getElementById('kpi-shock-a');
+      const shkB = document.getElementById('kpi-shock-b');
+      const vcA = document.getElementById('kpi-vc-a');
+      const vcB = document.getElementById('kpi-vc-b');
+      const losA = document.getElementById('kpi-los-a');
+      const losB = document.getElementById('kpi-los-b');
+      const clk = document.getElementById('sim-clock-readout');
+
+      if (outA) outA.textContent = Math.round(worldA.metricOutflow).toLocaleString();
+      if (outB) outB.textContent = Math.round(worldB.metricOutflow).toLocaleString();
+      if (spdA) spdA.textContent = worldA.metricSpeed.toFixed(1);
+      if (spdB) spdB.textContent = worldB.metricSpeed.toFixed(1);
+      if (shkA) shkA.textContent = worldA.metricShockRate.toFixed(1);
+      if (shkB) shkB.textContent = worldB.metricShockRate.toFixed(1);
+      if (vcA) vcA.textContent = worldA.metricVC.toFixed(2);
+      if (vcB) vcB.textContent = worldB.metricVC.toFixed(2);
+
+      if (losA) {
+        const vca = worldA.metricVC;
+        losA.textContent = vca > 1.0 ? `LOS F · Jam` : (vca > 0.85 ? `LOS E · Unstable` : `LOS D · Slow`);
+        losA.className = `los-badge ${vca > 0.9 ? 'is-bad' : 'is-neutral'}`;
+      }
+      if (losB) {
+        const vcb = worldB.metricVC;
+        losB.textContent = vcb <= 0.7 ? `LOS B · Free` : (vcb <= 0.9 ? `LOS C · Green Wave` : `LOS D · Near Cap`);
+        losB.className = `los-badge ${vcb <= 0.95 ? 'is-good' : 'is-neutral'}`;
+      }
+      if (clk) clk.textContent = `Elapsed ${formatClock(appState.simTime)} · Click any numbered pin to inspect`;
+    }
+
+    function renderHotspotPills() {
+      const container = document.getElementById('hotspot-pills');
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 0; i < HOTSPOTS.length; i++) {
+        const hs = HOTSPOTS[i];
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `hotspot-btn ${hs.scenario === 'A' ? 'is-bad' : 'is-good'}${appState.activeHotspotId === hs.id ? ' is-active' : ''}`;
+        btn.onclick = () => selectHotspot(hs.id);
+
+        const tag = document.createElement('span');
+        tag.className = 'hotspot-btn-tag';
+        tag.textContent = `Pin #${hs.num} · Scenario ${hs.scenario}`;
+
+        const ttl = document.createElement('span');
+        ttl.className = 'hotspot-btn-title';
+        ttl.textContent = hs.title;
+
+        btn.appendChild(tag);
+        btn.appendChild(ttl);
+        container.appendChild(btn);
+      }
+    }
+
+    function updateInspectorCard() {
+      const hs = HOTSPOTS.find((item) => item.id === appState.activeHotspotId) || HOTSPOTS[0];
+      const card = document.getElementById('inspector-card');
+      const badge = document.getElementById('insp-badge');
+      const title = document.getElementById('insp-title');
+      const desc = document.getElementById('insp-desc');
+      const metrics = document.getElementById('insp-metrics');
+
+      if (card) card.className = `inspector-card ${hs.scenario === 'A' ? 'is-bad' : 'is-good'}`;
+      if (badge) badge.textContent = hs.badge;
+      if (title) title.textContent = hs.title;
+      if (desc) desc.textContent = hs.desc;
+      if (metrics) {
+        metrics.innerHTML = '';
+        for (let i = 0; i < hs.stats.length; i++) {
+          const st = hs.stats[i];
+          const box = document.createElement('div');
+          box.className = 'inspector-stat';
+          const lbl = document.createElement('span');
+          lbl.className = 'label';
+          lbl.textContent = st.label;
+          const val = document.createElement('div');
+          val.className = 'inspector-stat-val';
+          val.textContent = st.value;
+          box.appendChild(lbl);
+          box.appendChild(val);
+          metrics.appendChild(box);
+        }
+      }
+    }
+
+    function syncControlUI() {
+      // Tabs
+      const tabs = [
+        { id: 'tab-compare', mode: 'compare' },
+        { id: 'tab-a', mode: 'A' },
+        { id: 'tab-b', mode: 'B' }
+      ];
+      for (let i = 0; i < tabs.length; i++) {
+        const el = document.getElementById(tabs[i].id);
+        if (el) {
+          const active = appState.mode === tabs[i].mode;
+          el.classList.toggle('is-active', active);
+          el.setAttribute('aria-selected', active ? 'true' : 'false');
+        }
+      }
+
+      // KPI visibility per mode
+      const showA = appState.mode !== 'B';
+      const showB = appState.mode !== 'A';
+      const togglePair = (aId, bId, gridId) => {
+        const wa = document.getElementById(aId);
+        const wb = document.getElementById(bId);
+        const gr = document.getElementById(gridId);
+        if (wa) wa.style.display = showA ? 'grid' : 'none';
+        if (wb) wb.style.display = showB ? 'grid' : 'none';
+        if (gr) gr.classList.toggle('single-col', !(showA && showB));
+      };
+      togglePair('kpi-outflow-a-wrap', 'kpi-outflow-b-wrap', 'kpi-outflow-grid');
+      togglePair('kpi-speed-a-wrap', 'kpi-speed-b-wrap', 'kpi-speed-grid');
+      togglePair('kpi-shock-a-wrap', 'kpi-shock-b-wrap', 'kpi-shock-grid');
+      togglePair('kpi-vc-a-wrap', 'kpi-vc-b-wrap', 'kpi-vc-grid');
+
+      // Viewport status note
+      const note = document.getElementById('viewport-status-note');
+      if (note) {
+        if (appState.mode === 'compare') {
+          note.textContent = `Showing synchronized 480m corridor stretch with two cross-street junctions (J1 & J2) under identical vehicle arrival demand.`;
+        } else if (appState.mode === 'A') {
+          note.textContent = `Focused View: Scenario A (Today As-Is) — In-lane bus halts, curb parking, erratic cut-ins, and LWR shockwaves.`;
+        } else {
+          note.textContent = `Focused View: Scenario B (Bundled TSM) — Indented bus bays, clear curb lanes, turn pockets, and 35 km/h Green Wave.`;
+        }
+      }
+
+      // Play/Pause
+      const ppTxt = document.getElementById('play-pause-text');
+      if (ppTxt) ppTxt.textContent = appState.paused ? 'Play' : 'Pause';
+
+      // Speed buttons
+      const spdBtns = document.querySelectorAll('.speed-btn');
+      for (let i = 0; i < spdBtns.length; i++) {
+        const b = spdBtns[i];
+        b.classList.toggle('is-active', Number(b.dataset.speed) === appState.simSpeed);
+      }
+
+      // Demand slider & label
+      const slider = document.getElementById('demand-slider');
+      const readout = document.getElementById('demand-readout');
+      const pcuLabel = document.getElementById('active-demand-pcu');
+      if (slider) slider.value = String(appState.demandPct);
+      if (readout) readout.textContent = `${appState.demandPct}%`;
+      if (pcuLabel) pcuLabel.textContent = `Arrival Demand: ~${Math.round(4150 * (appState.demandPct / 100)).toLocaleString()} PCU/hr`;
+
+      // Layer buttons
+      const ovBtn = document.getElementById('btn-overlay');
+      const hsBtn = document.getElementById('btn-hotspots');
+      if (ovBtn) {
+        ovBtn.classList.toggle('is-on', appState.showOverlay);
+        ovBtn.setAttribute('aria-pressed', appState.showOverlay ? 'true' : 'false');
+      }
+      if (hsBtn) {
+        hsBtn.classList.toggle('is-on', appState.showHotspots);
+        hsBtn.setAttribute('aria-pressed', appState.showHotspots ? 'true' : 'false');
+      }
+    }
+
+    /* =========================================================================
+       HOISTED INTERACTION HANDLERS & STATE PERSISTENCE
+       ========================================================================= */
+    async function persistAppState() {
+      if (!window.notebookAppApi || typeof window.notebookAppApi.setAppState !== 'function') return;
+      try {
+        await window.notebookAppApi.setAppState({
+          mode: appState.mode,
+          simSpeed: appState.simSpeed,
+          demandPct: appState.demandPct,
+          showOverlay: appState.showOverlay,
+          showHotspots: appState.showHotspots,
+          activeHotspotId: appState.activeHotspotId
+        });
+      } catch (err) {
+        // Ignore transient host persistence errors
+      }
+    }
+
+    function setScenarioMode(mode) {
+      appState.mode = mode;
+      syncControlUI();
+      renderTrafficCanvas();
+      renderTelemetryChart();
+      persistAppState();
+    }
+
+    function togglePlayPause() {
+      appState.paused = !appState.paused;
+      syncControlUI();
+    }
+
+    function resetSimulation() {
+      rngSeed = 1337;
+      appState.simTime = 0;
+      worldA = createCorridorWorld('A');
+      worldB = createCorridorWorld('B');
+      seedInitialTraffic(worldA);
+      seedInitialTraffic(worldB);
+      updateTelemetryDOM();
+      renderTrafficCanvas();
+      renderTelemetryChart();
+    }
+
+    function setSimSpeed(spd) {
+      appState.simSpeed = Number(spd) || 1;
+      syncControlUI();
+      persistAppState();
+    }
+
+    function onDemandSlider(val) {
+      appState.demandPct = Math.max(40, Math.min(120, Number(val) || 100));
+      syncControlUI();
+      persistAppState();
+    }
+
+    function toggleOverlay() {
+      appState.showOverlay = !appState.showOverlay;
+      syncControlUI();
+      renderTrafficCanvas();
+      persistAppState();
+    }
+
+    function toggleHotspots() {
+      appState.showHotspots = !appState.showHotspots;
+      syncControlUI();
+      renderTrafficCanvas();
+      persistAppState();
+    }
+
+    function selectHotspot(id) {
+      appState.activeHotspotId = id;
+      renderHotspotPills();
+      updateInspectorCard();
+      renderTrafficCanvas();
+      persistAppState();
+    }
+
+    function focusHotspotScenario() {
+      const hs = HOTSPOTS.find((item) => item.id === appState.activeHotspotId);
+      if (!hs) return;
+      setScenarioMode(hs.scenario);
+    }
+
+    /* =========================================================================
+       MAIN ANIMATION LOOP & BOOTSTRAP
+       ========================================================================= */
+    let animFrameId = null;
+    let lastTimestamp = 0;
+    let uiTickAcc = 0;
+
+    function animationLoop(ts) {
+      if (!lastTimestamp) lastTimestamp = ts;
+      const rawDt = Math.min(0.05, (ts - lastTimestamp) / 1000);
+      lastTimestamp = ts;
+
+      if (!appState.paused) {
+        const dt = rawDt * appState.simSpeed;
+        const subSteps = dt > 0.04 ? 2 : 1;
+        const stepDt = dt / subSteps;
+        for (let s = 0; s < subSteps; s++) {
+          appState.simTime += stepDt;
+          stepSynchronizedArrivals(stepDt);
+          stepWorld(worldA, stepDt);
+          stepWorld(worldB, stepDt);
+        }
+      }
+
+      renderTrafficCanvas();
+
+      uiTickAcc += rawDt;
+      if (uiTickAcc >= 0.25) {
+        uiTickAcc = 0;
+        updateTelemetryDOM();
+        renderTelemetryChart();
+      }
+
+      animFrameId = requestAnimationFrame(animationLoop);
+    }
+
+    async function initApp() {
+      readTokens();
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+
+      if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === 'function') {
+        try {
+          const saved = await window.notebookAppApi.getAppState();
+          if (saved && typeof saved === 'object') {
+            if (saved.mode === 'compare' || saved.mode === 'A' || saved.mode === 'B') appState.mode = saved.mode;
+            if ([0.5, 1, 2, 3].includes(Number(saved.simSpeed))) appState.simSpeed = Number(saved.simSpeed);
+            if (Number(saved.demandPct) >= 40 && Number(saved.demandPct) <= 120) appState.demandPct = Number(saved.demandPct);
+            if (typeof saved.showOverlay === 'boolean') appState.showOverlay = saved.showOverlay;
+            if (typeof saved.showHotspots === 'boolean') appState.showHotspots = saved.showHotspots;
+            if (HOTSPOTS.some((h) => h.id === saved.activeHotspotId)) appState.activeHotspotId = saved.activeHotspotId;
+          }
+        } catch (err) {
+          // Proceed with defaults
+        }
+      }
+
+      seedInitialTraffic(worldA);
+      seedInitialTraffic(worldB);
+
+      syncControlUI();
+      renderHotspotPills();
+      updateInspectorCard();
+      updateTelemetryDOM();
+      renderTrafficCanvas();
+      renderTelemetryChart();
+
+      // Canvas click hit-testing for hotspot pins
+      const canvas = document.getElementById('traffic-canvas');
+      if (canvas) {
+        canvas.addEventListener('click', (ev) => {
+          const rect = canvas.getBoundingClientRect();
+          const cx = ev.clientX - rect.left;
+          const cy = ev.clientY - rect.top;
+          for (let i = 0; i < hotspotHitTargets.length; i++) {
+            const ht = hotspotHitTargets[i];
+            const dist = Math.hypot(cx - ht.x, cy - ht.y);
+            if (dist <= ht.r) {
+              selectHotspot(ht.id);
+              return;
+            }
+          }
+        });
+      }
+
+      // Keyboard shortcuts (Space: Play/Pause, 1-6: Hotspots)
+      document.addEventListener('keydown', (ev) => {
+        if (ev.target && (ev.target.tagName === 'INPUT' || ev.target.tagName === 'TEXTAREA')) return;
+        if (ev.code === 'Space') {
+          ev.preventDefault();
+          togglePlayPause();
+        } else if (ev.key >= '1' && ev.key <= '6') {
+          const idx = Number(ev.key) - 1;
+          if (HOTSPOTS[idx]) selectHotspot(HOTSPOTS[idx].id);
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        renderTrafficCanvas();
+        renderTelemetryChart();
+      });
+
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+      animFrameId = requestAnimationFrame(animationLoop);
+
+      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === 'function') {
+        window.notebookAppApi.notifyAppReady();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>

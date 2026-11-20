@@ -1,0 +1,117 @@
+behaviour,density_veh_km,flow_veh_h
+"Disciplined (smooth, attentive)",5,281
+"Disciplined (smooth, attentive)",8,420
+"Disciplined (smooth, attentive)",11,562
+"Disciplined (smooth, attentive)",13,699
+"Disciplined (smooth, attentive)",16,839
+"Disciplined (smooth, attentive)",19,978
+"Disciplined (smooth, attentive)",21,1111
+"Disciplined (smooth, attentive)",24,1250
+"Disciplined (smooth, attentive)",27,1383
+"Disciplined (smooth, attentive)",29,1517
+"Disciplined (smooth, attentive)",32,1645
+"Disciplined (smooth, attentive)",35,1768
+"Disciplined (smooth, attentive)",37,1875
+"Disciplined (smooth, attentive)",40,1953
+"Disciplined (smooth, attentive)",43,1989
+"Disciplined (smooth, attentive)",45,1998
+"Disciplined (smooth, attentive)",48,1986
+"Disciplined (smooth, attentive)",51,1952
+"Disciplined (smooth, attentive)",53,1907
+"Disciplined (smooth, attentive)",56,1856
+"Disciplined (smooth, attentive)",59,1806
+"Disciplined (smooth, attentive)",61,1750
+"Disciplined (smooth, attentive)",64,1692
+"Disciplined (smooth, attentive)",67,1632
+"Disciplined (smooth, attentive)",69,1574
+"Disciplined (smooth, attentive)",72,1512
+"Disciplined (smooth, attentive)",75,1448
+"Disciplined (smooth, attentive)",77,1398
+"Disciplined (smooth, attentive)",80,1324
+Erratic driving (random braking),5,252
+Erratic driving (random braking),8,374
+Erratic driving (random braking),11,498
+Erratic driving (random braking),13,620
+Erratic driving (random braking),16,739
+Erratic driving (random braking),19,855
+Erratic driving (random braking),21,969
+Erratic driving (random braking),24,1071
+Erratic driving (random braking),27,1166
+Erratic driving (random braking),29,1242
+Erratic driving (random braking),32,1306
+Erratic driving (random braking),35,1340
+Erratic driving (random braking),37,1368
+Erratic driving (random braking),40,1376
+Erratic driving (random braking),43,1368
+Erratic driving (random braking),45,1363
+Erratic driving (random braking),48,1350
+Erratic driving (random braking),51,1322
+Erratic driving (random braking),53,1306
+Erratic driving (random braking),56,1272
+Erratic driving (random braking),59,1245
+Erratic driving (random braking),61,1213
+Erratic driving (random braking),64,1184
+Erratic driving (random braking),67,1146
+Erratic driving (random braking),69,1110
+Erratic driving (random braking),72,1068
+Erratic driving (random braking),75,1036
+Erratic driving (random braking),77,998
+Erratic driving (random braking),80,953
+Erratic + slow restarts,5,251
+Erratic + slow restarts,8,374
+Erratic + slow restarts,11,496
+Erratic + slow restarts,13,612
+Erratic + slow restarts,16,718
+Erratic + slow restarts,19,801
+Erratic + slow restarts,21,861
+Erratic + slow restarts,24,879
+Erratic + slow restarts,27,897
+Erratic + slow restarts,29,886
+Erratic + slow restarts,32,881
+Erratic + slow restarts,35,876
+Erratic + slow restarts,37,870
+Erratic + slow restarts,40,870
+Erratic + slow restarts,43,841
+Erratic + slow restarts,45,818
+Erratic + slow restarts,48,797
+Erratic + slow restarts,51,781
+Erratic + slow restarts,53,756
+Erratic + slow restarts,56,742
+Erratic + slow restarts,59,716
+Erratic + slow restarts,61,695
+Erratic + slow restarts,64,672
+Erratic + slow restarts,67,654
+Erratic + slow restarts,69,632
+Erratic + slow restarts,72,602
+Erratic + slow restarts,75,573
+Erratic + slow restarts,77,546
+Erratic + slow restarts,80,528
+Erratic + slow restarts + kerb stops,5,232
+Erratic + slow restarts + kerb stops,8,339
+Erratic + slow restarts + kerb stops,11,449
+Erratic + slow restarts + kerb stops,13,542
+Erratic + slow restarts + kerb stops,16,638
+Erratic + slow restarts + kerb stops,19,704
+Erratic + slow restarts + kerb stops,21,756
+Erratic + slow restarts + kerb stops,24,784
+Erratic + slow restarts + kerb stops,27,822
+Erratic + slow restarts + kerb stops,29,819
+Erratic + slow restarts + kerb stops,32,833
+Erratic + slow restarts + kerb stops,35,842
+Erratic + slow restarts + kerb stops,37,822
+Erratic + slow restarts + kerb stops,40,814
+Erratic + slow restarts + kerb stops,43,799
+Erratic + slow restarts + kerb stops,45,793
+Erratic + slow restarts + kerb stops,48,768
+Erratic + slow restarts + kerb stops,51,766
+Erratic + slow restarts + kerb stops,53,734
+Erratic + slow restarts + kerb stops,56,716
+Erratic + slow restarts + kerb stops,59,703
+Erratic + slow restarts + kerb stops,61,679
+Erratic + slow restarts + kerb stops,64,664
+Erratic + slow restarts + kerb stops,67,630
+Erratic + slow restarts + kerb stops,69,600
+Erratic + slow restarts + kerb stops,72,583
+Erratic + slow restarts + kerb stops,75,567
+Erratic + slow restarts + kerb stops,77,550
+Erratic + slow restarts + kerb stops,80,520

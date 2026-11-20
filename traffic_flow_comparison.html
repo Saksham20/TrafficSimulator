@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Same road. Different flow.</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #161616; background: #f7f7f4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .wrap { max-width: 1220px; margin: auto; padding: 36px 28px 50px; }
+    .eyebrow, .mono, button, .stat, .note, .legend, summary, .readout { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .eyebrow { font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
+    .intro { display: flex; align-items: end; justify-content: space-between; gap: 26px; margin: 15px 0 24px; }
+    h1 { font-size: clamp(38px, 5vw, 64px); line-height: .99; letter-spacing: -.06em; margin: 0; }
+    .intro p { max-width: 370px; line-height: 1.5; font-size: 14px; margin: 0 0 3px; color: #4d4d4d; }
+    .settings { border: 1px solid #bbb; padding: 18px 22px; margin-bottom: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 36px; }
+    .setting label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: bold; }
+    .setting output { font: 12px ui-monospace, monospace; }
+    .setting input { width: 100%; margin: 16px 0 8px; accent-color: #161616; cursor: pointer; }
+    .setting p, .settings-note { margin: 0; font-size: 11px; color: #555; line-height: 1.5; }
+    .settings-note { grid-column: 1 / -1; border-top: 1px solid #ddd; padding-top: 10px; }
+    input:focus-visible { outline: 2px solid #161616; outline-offset: 4px; }
+    .panel { background: #fff; border: 1.5px solid #191919; margin-bottom: 16px; }
+    .panel-header { display: flex; align-items: center; gap: 18px; padding: 15px 22px; border-bottom: 1px solid #ddd; }
+    .number { border: 1px solid; width: 33px; height: 33px; display: grid; place-items: center; flex: none; font-size: 12px; }
+    h2 { margin: 0 0 4px; font-size: 21px; letter-spacing: -.035em; }
+    .panel-header p { margin: 0; color: #666; font-size: 12px; line-height: 1.4; }
+    .drawing { padding: 8px 10px; overflow-x: auto; }
+    canvas { display: block; width: 100%; aspect-ratio: 1000 / 290; }
+    .panel-footer { border-top: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 11px 22px; }
+    .readout { color: #555; font-size: 10px; line-height: 1.5; }
+    .stat { font-size: 11px; white-space: nowrap; }
+    .stat strong { font-size: 18px; }
+    .metrics { display: flex; align-items: center; gap: 22px; flex: none; }
+    .flow { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .flow-label { display: block; font-size: 10px; letter-spacing: .04em; }
+    .flow strong { font-size: 28px; letter-spacing: -.05em; }
+    .flow-unit { font-size: 11px; }
+    .flow-window { display: block; margin-top: 3px; font-size: 9px; color: #666; }
+    .vc-row { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 12px 22px; border-top: 1px solid #ddd; font: 11px ui-monospace, monospace; }
+    .vc-row strong { font-size: 24px; }.vc-detail { line-height: 1.8; text-align: right; }
+    .travel-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 12px 22px; border-top: 1px solid #ddd; font: 11px ui-monospace, monospace; }
+    .travel-row strong { font-size: 20px; }.travel-row small { display: block; margin-top: 5px; color: #666; }
+    .distance-setting { grid-column: 1 / -1; display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+    select { padding: 7px; background: transparent; border: 1px solid #999; font: inherit; }
+    .results { border: 1.5px solid #161616; background: #fff; padding: 22px; margin-top: 24px; }
+    .results p { font-size: 12px; line-height: 1.6; }.results table { font: 12px ui-monospace, monospace; }
+    .result-scroll { overflow-x: auto; } button:disabled { opacity: .45; cursor: default; }
+    .accounting { border-top: 1px solid #ddd; padding: 11px 22px; font: 11px ui-monospace, monospace; line-height: 1.8; }
+    .accounting .queue { display: block; font-weight: bold; }
+    .demand-check { grid-column: 1 / -1; font: 11px ui-monospace, monospace; line-height: 1.7; }
+    .violation-list { padding-left: 18px; margin: 8px 0 0; font-size: 11px; line-height: 1.7; color: #444; }
+    .presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }.presets button { padding: 6px 8px; font-size: 10px; }
+    .bottom { display: flex; justify-content: space-between; align-items: start; gap: 22px; margin-top: 22px; }
+    .legend { font-size: 11px; line-height: 1.8; max-width: 600px; color: #555; }
+    .legend strong { color: #161616; }
+    .controls { display: flex; flex-wrap: wrap; gap: 6px; justify-content: end; }
+    button { cursor: pointer; border: 1px solid #161616; background: transparent; padding: 10px 12px; font-size: 11px; white-space: nowrap; }
+    button:hover, button[aria-pressed="true"] { background: #161616; color: white; }
+    button:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid #161616; outline-offset: 4px; }
+    .note { border-top: 1px solid #bbb; margin-top: 24px; padding-top: 13px; font-size: 10px; line-height: 1.6; color: #666; }
+    details { margin-top: 24px; border-top: 1px solid #bbb; padding-top: 15px; }
+    summary { cursor: pointer; font-size: 12px; }
+    .evidence { font-size: 13px; line-height: 1.6; max-width: 960px; }
+    .evidence a { color: inherit; }
+    table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+    th, td { border-bottom: 1px solid #ddd; text-align: left; vertical-align: top; padding: 9px 12px 9px 0; }
+    @media (max-width: 700px) {
+      .wrap { padding: 24px 12px 40px; }
+      .intro { display: block; }.intro p { margin-top: 16px; }
+      .settings { grid-template-columns: 1fr; padding: 16px; gap: 20px; }
+      .panel-header { padding: 13px; gap: 12px; } h2 { font-size: 17px; }
+      canvas { min-width: 730px; } .drawing { padding: 4px; }
+      .panel-footer { padding: 11px 13px; } .readout { max-width: 60%; }
+      .panel-footer { flex-wrap: wrap; } .panel-footer .readout { max-width: 100%; width: 100%; }
+      .metrics { width: 100%; justify-content: space-between; }
+      .bottom { display: block; } .controls { margin-top: 16px; justify-content: start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Traffic / a visual thought experiment</div>
+    <div class="intro">
+      <h1>Same road.<br>Different flow.</h1>
+      <p>Mixed traffic moves through space, not on rails. Bikes filter, cars follow in staggered positions, and a stopped bus changes the paths of everyone around it.</p>
+    </div>
+    <section class="settings" aria-label="Simulation settings">
+      <div class="setting">
+        <label for="inflow">PCU demand (V) · both roads <output id="inflow-value" for="inflow">8,000 PCU/h</output></label>
+        <input id="inflow" type="range" min="0" max="24000" step="1" value="8000" aria-describedby="inflow-help inflow-context">
+        <p id="inflow-help">Two-way demand per road, split equally between directions. Identical offered arrivals; excess demand waits outside each entrance.</p>
+        <p id="inflow-context">133.3 PCU/min · comparison demand for this simulation</p>
+        <div class="presets" aria-label="Demand presets"><button type="button" data-demand="3996">DPR reference · 3,996</button><button type="button" data-demand="8000">Compare bottlenecks · 8,000</button><button type="button" data-demand="16000">Both overloaded · 16,000</button></div>
+      </div>
+      <div class="setting">
+        <label for="violations">Violation intensity · upper road <output id="violations-value" for="violations">100%</output></label>
+        <input id="violations" type="range" min="0" max="100" step="5" value="100" aria-describedby="violations-help violation-list">
+        <p id="violations-help">Higher intensity adds more wrongly parked vehicles, unscheduled stops and gap-seeking cut-in drivers. Bus frequency and dwell stay unchanged.</p>
+        <ul class="violation-list" id="violation-list"></ul>
+      </div>
+      <div class="distance-setting"><label for="distance">Travel-time extrapolation</label><select id="distance"><option value="10">10 km · ×80</option><option value="12" selected>12 km · ×96</option><option value="15">15 km · ×120</option></select><span>Measured 125 m travel time × distance factor; assumes the same conditions repeat.</span></div>
+      <div class="demand-check" id="demand-check">PCU accounting: accumulating arrivals…</div>
+      <p class="settings-note" id="settings-status" role="status">Release a slider to restart both roads and reset measurements. Range extends to 24,000 PCU/h (400 PCU/min) for overload experiments. Only 3,996 is the observed Silk Board peak reference; higher presets are stress scenarios.</p>
+    </section>
+    <section class="panel" aria-labelledby="today-title">
+      <div class="panel-header"><span class="number mono">01</span><div><h2 id="today-title">Today / negotiating space</h2><p>Partial-width obstructions, passenger stops, narrow gaps and overlapping paths.</p></div></div>
+      <div class="drawing"><canvas id="today" width="1000" height="290" role="img" aria-label="Top-down mixed Indian traffic: motorcycles filter between staggered cars, autos pick up passengers, and traffic bends around parked vehicles and stopping buses."></canvas></div>
+      <div class="panel-footer"><span class="readout" id="today-status">MIXED TRAFFIC · CONTINUOUS LATERAL MOVEMENT</span><div class="metrics"><span class="stat">TRIPS <strong id="today-count">0</strong></span><div class="flow"><span class="flow-label">OUTFLOW · BOTH DIRECTIONS</span><strong id="today-flow">0.0</strong> <span class="flow-unit">PCU/min</span><span class="flow-window" id="today-window">Building window · 0/60 s</span></div></div></div>
+      <div class="vc-row"><span>SIMULATION V/C ≈ <strong id="today-vc">1.48</strong></span><span class="vc-detail" id="today-capacity"></span></div>
+      <div class="travel-row"><span>AVG TRAVEL TIME <strong id="today-time">—</strong><small id="today-time-detail">Waiting for completed trips</small></span><span id="today-admitted">0 vehicles admitted · 0 cars</span></div>
+      <div class="accounting"><span id="today-inflow"></span><span class="queue" id="today-queue"></span><span id="today-wait"></span></div>
+    </section>
+    <section class="panel" aria-labelledby="ideal-title">
+      <div class="panel-header"><span class="number mono">02</span><div><h2 id="ideal-title">If the road worked / predictable space</h2><p>The same arrivals and passenger stops, with clear through lanes and stopping bays.</p></div></div>
+      <div class="drawing"><canvas id="ideal" width="1000" height="290" role="img" aria-label="The same vehicle mix following marked lanes, using off-lane bays for passenger stops, then rejoining traffic through available gaps."></canvas></div>
+      <div class="panel-footer"><span class="readout" id="ideal-status">SAME DRIVER DYNAMICS · CLEARER ROAD SPACE</span><div class="metrics"><span class="stat">TRIPS <strong id="ideal-count">0</strong></span><div class="flow"><span class="flow-label">OUTFLOW · BOTH DIRECTIONS</span><strong id="ideal-flow">0.0</strong> <span class="flow-unit">PCU/min</span><span class="flow-window" id="ideal-window">Building window · 0/60 s</span></div></div></div>
+      <div class="vc-row"><span>SIMULATION V/C ≈ <strong id="ideal-vc">0.98</strong></span><span class="vc-detail" id="ideal-capacity"></span></div>
+      <div class="travel-row"><span>AVG TRAVEL TIME <strong id="ideal-time">—</strong><small id="ideal-time-detail">Waiting for completed trips</small></span><span id="ideal-admitted">0 vehicles admitted · 0 cars</span></div>
+      <div class="accounting"><span id="ideal-inflow"></span><span class="queue" id="ideal-queue"></span><span id="ideal-wait"></span></div>
+    </section>
+    <div class="bottom">
+      <div class="legend"><strong>Watch the gaps →</strong> Short trails reveal the actual paths. A heavy rear line marks braking; a dashed outline marks a passenger stop. Narrow two-wheelers can pass where a car cannot. Nearby traffic reacts to the encroaching vehicle’s width and speed—not an automatic penalty for changing lanes.</div>
+      <div class="controls"><button id="pause" aria-pressed="false">Ⅱ Pause</button><button id="speed" aria-pressed="false">1× speed</button><button id="advance">+5 simulated min</button><button id="trails" aria-pressed="true">Paths on</button><button id="end">■ End simulation</button><button id="reset">↺ Restart</button></div>
+    </div>
+    <section class="results" id="results" hidden aria-labelledby="results-title">
+      <h2 id="results-title" tabindex="-1">Run complete / comparison</h2>
+      <p id="results-context"></p>
+      <div class="result-scroll"><table><thead><tr><th>Metric</th><th>Upper road</th><th>Lower road</th><th>Change: lower vs upper</th></tr></thead><tbody id="results-body"></tbody></table></div>
+      <p>Travel time averages completed trips that entered after the counters reset. Unfinished trips and the off-road entry queue are excluded, so a congested road’s completed-trip average can understate delays. Counts include both directions; “cars” means the car category only. Percentage change = (lower − upper) / upper; shown as — when the upper value is zero or no average exists.</p>
+    </section>
+    <details>
+      <summary>From observed traffic to this model · footage &amp; sources</summary>
+      <div class="evidence">
+        <p>Frame sequences from two elevated-view Chennai clips were reviewed: <a href="https://ars.els-cdn.com/content/image/1-s2.0-S0378437118306356-mmc1.mp4">medium-flow footage</a> and <a href="https://ars.els-cdn.com/content/image/1-s2.0-S0378437118306356-mmc2.mp4">congested footage</a>, accompanying <a href="https://arxiv.org/html/1805.05076v1">Kanagaraj &amp; Treiber (2018)</a>. These are real observations; the paper’s separate simulated clips were not treated as footage of real traffic.</p>
+        <table><thead><tr><th>Visible pattern</th><th>Simulation rule</th></tr></thead><tbody>
+          <tr><td>Cars and bikes follow in staggered positions.</td><td>Continuous lateral positions; braking depends on longitudinal gap, closing speed and lateral overlap.</td></tr>
+          <tr><td>Two-wheelers pass between wider vehicles.</td><td>Different physical widths and headways; drivers search for usable gaps, with swept-body collision checks.</td></tr>
+          <tr><td>Dense traffic forms irregular clusters.</td><td>Shared irregular arrivals, varied desired speeds, finite acceleration and strongest-leader interaction.</td></tr>
+          <tr><td>Small sideways movements often replace full lane changes.</td><td>Gradual steering toward a nearby usable path. Parked vehicles remove only the width they actually occupy.</td></tr>
+        </tbody></table>
+        <p><strong>Model:</strong> Intelligent Driver Model (IDM) acceleration with the Mixed Traffic Flow Model’s lateral attenuation idea, plus a simplified local gap-search controller. This is not an exact MTM implementation or a fitted reconstruction. Passenger dwell events and protruding parking are illustrative additions requested for this street; their frequency was not measured from these clips.</p>
+        <p>Both roads use the same vehicle dimensions, acceleration, braking, headway parameters and offered arrivals. Only road-space management and lateral positioning differ. No target throughput ratio is imposed. See <a href="traffic_flow_sources.md">the model notes</a> for equations, assumptions and verification.</p>
+        <p><strong>Outflow (PCU/min):</strong> sum of passenger-car equivalents leaving both ends of the road over the last 60 simulated seconds. During the first minute, the shorter observed window is scaled to a per-minute rate and labelled “Building window.” This measures discharge, not inflow minus outflow. Fixed project weights: car 1.0, motorcycle/scooter 0.75, auto 2.0, delivery van 2.0, bus 3.7. These are illustrative equivalents; real PCUs depend on traffic conditions. Pause freezes the measurement; 2× playback still uses simulated seconds.</p>
+        <p><strong>Sliders:</strong> V is offered two-way PCU/hour. Each arrival spends its actual PCU weight from a shared demand budget; the small remainder waits for the next whole vehicles. Higher violation intensity adds upper-road parked vehicles, extra car/auto/loading stops, and drivers seeking smaller rear gaps. Scheduled bus frequency and dwell remain unchanged. Actual arrivals, vehicle mix and PCUs stay identical. Changing a slider restarts both scenes with a 25-second pre-run and clears counters.</p>
+        <p><strong>Simulation V/C:</strong> V is selected demand, not the measured discharge. C is an approximate discharge envelope measured from this very simulation: 120 s warm-up then 480 s measurement at five demand levels, taking maximum observed discharge. At 100% violations, the estimates are 2,563 PCU/h above and 8,175 PCU/h below. Intermediate intensity estimates interpolate benchmark samples; they are not forced to decrease monotonically. This one-seed estimate is not a real-road capacity or a hard outflow cap. <code>node traffic_flow_capacity_audit.js</code> reproduces the benchmark. The different 3,996/5,143 PCU/h corridor-model values remain documented separately; they no longer label this wider, unsignalised animation.</p>
+        <p><strong>Why contrast depends on demand:</strong> at light demand both roads can clear their arrivals, so a large difference is not expected. The 8,000 PCU/h default lies between the benchmark capacities at 100% violations. Run for several simulated minutes (or use +5 simulated min) to see queues develop. At extreme demand both roads may congest. Offered PCUs, admitted PCUs and outflow are distinct: queued demand is never discarded.</p>
+        <p><strong>Travel times:</strong> timing starts when a vehicle’s centre crosses the entrance and ends at the 125 m exit. Pre-run entrants are excluded. The mean of completed trips is multiplied by 80, 96 or 120 for 10, 12 or 15 km. This is a repeated-conditions extrapolation, not a calibrated Bengaluru route forecast: it does not add junctions, route variation or waiting outside the entrance. “End simulation” freezes the run and shows a final comparison; Restart or changing a demand/violation slider begins a new run.</p>
+      </div>
+    </details>
+    <p class="note">ILLUSTRATIVE 125 m STREET · LEFT-HAND TRAFFIC · SIX VEHICLE TYPES · UNCALIBRATED DEMAND AND DWELLS · INITIAL SCENE PRE-RUN 25 s; COUNTERS START HERE · ON SMALL SCREENS, SCROLL EACH ROAD SIDEWAYS</p>
+    <noscript>This animation requires JavaScript.</noscript>
+  </main>
+  <script src="traffic_flow_model.js"></script>
+  <script src="traffic_flow_view.js"></script>
+</body>
+</html>

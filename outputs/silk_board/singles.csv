@@ -1,0 +1,10 @@
+scenario,fixed,state_of_rest,capacity_pcu_h,vs_today_pct,peak_minutes,speed_kmh,road_full_in
+No parking / stopping on carriageway,parking,today,4164,4,41.8,14.8,2028
+"Clear encroachments (vendors, debris, boxes)",encroach,today,4060,2,42.8,14.4,2027
+"Keep junctions clear, no stop-go waves",box,today,4100,3,42.4,14.6,2027
+Bus bays at the kerbside stops,bus,today,4177,5,41.7,14.8,2028
+Continuous footpaths + safe crossings,peds,today,4132,3,42.1,14.7,2027
+Lane markings + lane discipline,lanes,today,4060,2,42.8,14.4,2027
+Fewer median gaps / U-turns / side entries,access,today,4060,2,42.8,14.4,2027
+"Adaptive, coordinated signals (no manual override)",signals,today,4205,5,41.4,14.9,2028
+Smooth surface + working drains,surface,today,4034,1,43.0,14.4,2027

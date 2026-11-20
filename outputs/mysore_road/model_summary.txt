@@ -1,0 +1,36 @@
+
+=== Mysore Rd: Sirsi Circle -> Nayandahalli ===
+Overlap exponent K = 0.31 (reused from Silk Board)
+Google full route (2.3 km): 5 min at 6 am, 8 min at 10 am -> A = 0.39
+
+LADDER (same road, same lanes, two-way PCU/h; travel time at today's peak demand)
+  scenario                                             | capacity_pcu_h |   vs_today_pct |   peak_minutes |      speed_kmh |   road_full_in
+  Worst day (everything breaks)                        |           3989 |            -32 |           10.1 |           13.9 |           2026
+  Today (estimated)                                    |           5840 |              0 |            7.6 |           18.3 |           2026
+  Today + Enforce                                      |           6308 |              8 |            7.3 |           19.1 |           2028
+  Today + Design                                       |           6680 |             14 |            7.1 |           19.6 |           2030
+  Today + Signals                                      |           6145 |              5 |            7.4 |           18.8 |           2028
+  Today + Maintain                                     |           5933 |              2 |            7.5 |           18.5 |           2027
+  Enforce + Signals (no construction)                  |           6638 |             14 |            7.1 |           19.6 |           2030
+  Enforce + Signals + Design                           |           7593 |             30 |            6.7 |           20.7 |           2033
+  Everything fixed (IRC arterial)                      |           7714 |             32 |            6.7 |           20.8 |           2034
+
+ONE INTERVENTION AT A TIME (rest as today)
+  scenario                                             | capacity_pcu_h |   vs_today_pct |   peak_minutes |      speed_kmh |   road_full_in
+  Bus bays + organised bus-stand entry/exit            |           6162 |              6 |            7.4 |           18.9 |           2028
+  Adaptive, coordinated signals (no manual override)   |           6145 |              5 |            7.4 |           18.8 |           2028
+  Continuous footpaths + safe crossings                |           6094 |              4 |            7.4 |           18.8 |           2028
+  No parking / stopping on carriageway                 |           6050 |              4 |            7.5 |           18.7 |           2027
+  Keep junctions clear, no stop-go waves               |           5992 |              3 |            7.5 |           18.6 |           2027
+  Fewer median gaps / U-turns / side entries           |           5972 |              2 |            7.5 |           18.6 |           2027
+  Clear encroachments (vendors, debris, boxes)         |           5935 |              2 |            7.5 |           18.5 |           2027
+  Lane markings + lane discipline                      |           5933 |              2 |            7.5 |           18.5 |           2027
+  Smooth surface + working drains                      |           5933 |              2 |            7.5 |           18.5 |           2027
+
+GOOGLE CHECK (capacity that would explain Google's 10 am time)
+  Google bad day        12.1 min  -> ~3325 PCU/h
+  Google typical day     7.6 min  -> ~5840 PCU/h
+  Google good day        5.5 min  -> ~46899 PCU/h
+
+512 combinations -> outputs/mysore_road/all_combinations.csv
+Demand forecast reaches: today's capacity 2026, all fixes 2034, All fixes + widen the 0.7 km pinch to 4 lanes (IRC 8-lane) 2041

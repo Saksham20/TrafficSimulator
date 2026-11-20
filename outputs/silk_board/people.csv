@@ -1,0 +1,6 @@
+option,people_per_hour,pcu,note
+"Today (DPR count, 10-11 am)",9593,4231,buses are 3% of vehicles but carry 47% of people
+"Fix the road, no flyover (IRC arterial)",10814,5143,"same mix, more of it"
+Today + flyover (DPR deck full),16827,9631,"1.5 lanes/direction x 1800 PCU, private vehicles"
+Fix the road + 1 bus lane each way,13045,3459,takes 1 of 2 lanes; 120 buses/h/dir x 40
+Fix the road + bus lane in the paver strip,16489,6031,all general lanes kept; bus lane uses the existing 3-5 m strip

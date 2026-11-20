@@ -1,0 +1,10 @@
+scenario,fixed,state_of_rest,capacity_pcu_h,vs_today_pct,peak_minutes,speed_kmh,road_full_in
+Worst day (everything breaks),-,worst,3989,-32,10.1,13.9,2026
+Today (estimated),-,today,5840,0,7.6,18.3,2026
+Today + Enforce,parking+encroach+box,today,6308,8,7.3,19.1,2028
+Today + Design,bus+peds+lanes+access,today,6680,14,7.1,19.6,2030
+Today + Signals,signals,today,6145,5,7.4,18.8,2028
+Today + Maintain,surface,today,5933,2,7.5,18.5,2027
+Enforce + Signals (no construction),parking+encroach+box+signals,today,6638,14,7.1,19.6,2030
+Enforce + Signals + Design,parking+encroach+box+bus+peds+lanes+access+signals,today,7593,30,6.7,20.7,2033
+Everything fixed (IRC arterial),parking+encroach+box+bus+peds+lanes+access+signals+surface,today,7714,32,6.7,20.8,2034

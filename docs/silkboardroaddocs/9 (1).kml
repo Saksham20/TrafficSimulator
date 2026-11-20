@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="9" id="9">
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="id" type="string"></SimpleField>
+	<SimpleField name="project" type="string"></SimpleField>
+	<SimpleField name="folder" type="string"></SimpleField>
+	<SimpleField name="approx_length" type="string"></SimpleField>
+	<SimpleField name="status" type="string"></SimpleField>
+</Schema>
+<Folder><name>9</name>
+  <Placemark id="9.1">
+	<name>9. Old Madras Rd – Silk Board</name>
+	<description>9. Old Madras Rd – Silk Board</description>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9">
+		<SimpleData name="id">2026-08-19_elevated-corridor.9</SimpleData>
+		<SimpleData name="project">Elevated Corridors (Category A-C)</SimpleData>
+		<SimpleData name="folder">Category B (5-10km) elevated corridors</SimpleData>
+		<SimpleData name="approx_length">5.2 km  (Cat B)</SimpleData>
+		<SimpleData name="status">Tender floated</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>77.64529,12.98455 77.64651,12.97852 77.64082,12.97836 77.64106,12.97153 77.64129,12.9678 77.64151,12.96281 77.64158,12.96196 77.64156,12.96038 77.64139,12.95959 77.64125,12.95833 77.64122,12.95749 77.64128,12.95553 77.64121,12.95453 77.6411,12.954 77.64079,12.95352 77.63925,12.95081 77.63903,12.95026 77.63906,12.94968 77.63955,12.94899 77.64033,12.94835 77.64061,12.94789 77.64067,12.94737 77.64054,12.94692 77.63671,12.94067 77.6358,12.93932 77.63511,12.93877 77.63445,12.93849 77.63361,12.93832 77.63289,12.9383 77.63058,12.93838 77.62951,12.93838 77.62889,12.93831 77.62802,12.93793 77.62694,12.93727 77.62428,12.93514 77.62376,12.93457 77.62322,12.93357 77.62076,12.9274 77.62042,12.92641 77.62006,12.92567 77.61976,12.92529 77.61797,12.92435 77.62858,12.9068</coordinates></LineString>
+  </Placemark>
+</Folder>
+</Document></kml>

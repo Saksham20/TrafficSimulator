@@ -1,0 +1,6 @@
+seg,name,km,width_m,lanes_each_way,signals,google_kmh_6am,google_kmh_10am,google_kmh_6pm,google_min_10am,today_pcu,best_pcu,uplift_pcu,uplift_pct,best_plus_strip_pcu,flyover_pcu,flyover_uplift_pcu,flyover_plus_ejipura_pcu,fix_plus_flyover_pcu,best_min_10am,best_kmh_10am,min_today,min_fix,min_flyover,min_ejipura,min_flyover_ejipura,min_fix_ejipura,min_fix_all,saved_fix_min,saved_flyover_min
+1,BGS ramp -> Limgappa Circle,0.42,12.6,3,1,35.8,13.7,19.4,1.9,5994,7714,1720,29,7714,13194,7200,13194,14914,1.5,18.2,1.95,1.47,1.0,1.95,1.0,1.47,0.94,0.48,0.95
+2,Limgappa Circle -> Gopalan Mall (narrowest),0.5,9.8,3,1,27.9,11.8,15.5,2.5,5768,7714,1946,34,7714,12968,7200,12968,14914,1.8,15.9,2.48,1.85,1.33,2.48,1.33,1.85,1.26,0.63,1.15
+3,Gopalan Mall -> Satellite Bus Stand,0.52,14.3,4,1,18.7,11.0,13.1,2.6,7306,10286,2979,41,10286,14506,7200,14506,17486,2.0,13.8,2.58,2.05,1.78,2.58,1.78,2.05,1.7,0.53,0.8
+4,Satellite -> Gali Anjaneya -> Kimco/BHEL,0.83,12.0,3,2,29.5,13.2,21.3,3.3,5603,7714,2111,38,7714,12803,7200,12803,14914,2.5,17.9,3.32,2.45,1.84,3.32,1.84,2.45,1.74,0.87,1.48
+5,Kimco -> Mysore Road Metro / Nayandahalli,0.28,11.6,3,1,30.7,24.5,19.8,0.7,5775,7714,1939,34,7714,11175,5400,11175,13114,0.7,26.9,0.73,0.66,0.62,0.73,0.62,0.66,0.61,0.07,0.11

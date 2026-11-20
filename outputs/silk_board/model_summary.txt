@@ -1,0 +1,43 @@
+
+=== Old Madras Rd -> Silk Board ===
+Overlap exponent K = 0.31 (raw literature product today 0.44)
+Google full route (10.3 km): 23 min at 6 am, 43 min at 10 am -> A = 0.89
+
+LADDER (same road, same lanes, two-way PCU/h; travel time at today's peak demand)
+  scenario                                             | capacity_pcu_h |   vs_today_pct |   peak_minutes |      speed_kmh |   road_full_in
+  Worst day (everything breaks)                        |           2646 |            -34 |           69.5 |            8.9 |           2026
+  Today (calibrated to DPR count)                      |           3996 |              0 |           43.4 |           14.2 |           2026
+  Today + Enforce                                      |           4340 |              9 |           40.3 |           15.3 |           2029
+  Today + Design                                       |           4459 |             12 |           39.4 |           15.7 |           2029
+  Today + Signals                                      |           4205 |              5 |           41.4 |           14.9 |           2028
+  Today + Maintain                                     |           4034 |              1 |           43.0 |           14.4 |           2027
+  Enforce + Signals (no construction)                  |           4566 |             14 |           38.6 |           16.0 |           2030
+  Enforce + Signals + Design                           |           5095 |             27 |           35.5 |           17.4 |           2033
+  Everything fixed (IRC arterial)                      |           5143 |             29 |           35.3 |           17.5 |           2033
+
+ONE INTERVENTION AT A TIME (rest as today)
+  scenario                                             | capacity_pcu_h |   vs_today_pct |   peak_minutes |      speed_kmh |   road_full_in
+  Adaptive, coordinated signals (no manual override)   |           4205 |              5 |           41.4 |           14.9 |           2028
+  Bus bays at the kerbside stops                       |           4177 |              5 |           41.7 |           14.8 |           2028
+  No parking / stopping on carriageway                 |           4164 |              4 |           41.8 |           14.8 |           2028
+  Continuous footpaths + safe crossings                |           4132 |              3 |           42.1 |           14.7 |           2027
+  Keep junctions clear, no stop-go waves               |           4100 |              3 |           42.4 |           14.6 |           2027
+  Clear encroachments (vendors, debris, boxes)         |           4060 |              2 |           42.8 |           14.4 |           2027
+  Lane markings + lane discipline                      |           4060 |              2 |           42.8 |           14.4 |           2027
+  Fewer median gaps / U-turns / side entries           |           4060 |              2 |           42.8 |           14.4 |           2027
+  Smooth surface + working drains                      |           4034 |              1 |           43.0 |           14.4 |           2027
+
+GOOGLE CHECK (capacity that would explain Google's 10 am time)
+  Google bad day        72.3 min  -> ~2571 PCU/h
+  Google typical day    43.4 min  -> ~3996 PCU/h
+  Google good day       30.1 min  -> ~6773 PCU/h
+
+PEOPLE PER HOUR (peak, both directions)
+  Today (DPR count, 10-11 am)                  9,593 people/h   (buses are 3% of vehicles but carry 47% of people)
+  Fix the road, no flyover (IRC arterial)     10,814 people/h   (same mix, more of it)
+  Today + flyover (DPR deck full)             16,827 people/h   (1.5 lanes/direction x 1800 PCU, private vehicles)
+  Fix the road + 1 bus lane each way          13,045 people/h   (takes 1 of 2 lanes; 120 buses/h/dir x 40)
+  Fix the road + bus lane in the paver strip  16,489 people/h   (all general lanes kept; bus lane uses the existing 3-5 m strip)
+
+512 combinations -> outputs/silk_board/all_combinations.csv
+Demand forecast reaches: today's capacity 2026, all fixes 2033, All fixes + paver buffer used as 3rd lane (IRC 6-lane) 2045

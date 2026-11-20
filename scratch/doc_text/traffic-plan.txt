@@ -1,0 +1,164 @@
+=== PAGE 1 ===
+Tunnel
+East - West Corridor
+Swami Vivekananda Road
+Indiranagara
+Metro Station
+Metro Station
+DOMLUR
+CH:500.00m
+CH:750.00m
+CH:1000.00m
+CH:1400.00m
+CH:2000.00m
+CH:2500.00m
+CH:3100.00m
+CH:3550.00m
+CH:4000.00m
+CH:5000.00m
+CH:5500.00m
+CH:6000.00m
+CH:6125.00m
+CH:6500.00m
+CH:7000.00m
+CH:8350.00m
+CH:8500.00m
+CH:9000.00m
+CH:9500.00m
+CH:2880.00m
+CH:3683.00m
+CH:4583.00m
+CH:7500.00m
+CH:8000.00m
+Old Madras Road
+Start of Project
+6th Main Road
+CMH Road
+100 Feet Road
+Intermediate Ring Road(IRR)
+Intermediate Ring Road(IRR)
+Intermediate Ring Road(IRR)
+HAL Old Airport Road
+HAL Old Airport Road
+Ejipura Main Road
+Srinivagilu Main Road
+Sarjapura Road
+Sarjapura Road
+Hosur Road
+Hosur Road
+CH:0.00m
+End of Project
+CH:9800.00m
+Silk Board
+Metro Staton
+Silk Board
+Junction
+Defence  Land
+Defence Land
+Defence Land
+Defence Land
+ST. John's Medical College
+St Jhon's 
+Students
+Hostel
+300.0m
+& Hospital
+Old Madras Road
+Madiwala
+Underpass
+80 Feet Road
+Resurrection
+Church
+Isolation
+Hospital
+Sir C V Raman
+General Hospital
+Sony World
+Signal
+Domlur Flyover to Start of Ejipura Flyover
+MOR to CMH
+24.0m
+800.0m
+CMH to
+24.0m
+600.0m
+100' Road
+100' Road to Start of Domlur Flyover
+30.0m
+1715.0m
+Domlur Flyover
+467.0m
+2542.0m
+33.0m
+(Defence 1001.0m)
+Ejipura Flyover (under Construction)/Madiwala
+2225.0m/400.0m
+17.0m
+17.0m
+Madiwala to Silk Board
+950.0m
+30.0 to 45.0m
+10975.0m
+Proposed Flyover Length = 10817.0m
+White topping portion
+Asphalt Road
+6125.0m
+4851.0m
+Signal-1
+Signal-2
+Signal-3
+Signal-4
+12th Main Road
+Signal-5
+Signal-6
+Underpass for
+Defence Use only
+Ejipura Flyover U/C
+Signal-7
+Signal-8
+Signal-9
+Signal-10
+Signal-12
+Signal-11
+Madiwala Road
+CH:10000.00m
+CH:10500.00m
+CH:10975.00m
+Begur Road
+Signal-13
+to Begur Road Junction
+1175.0m
+50.0 to 60.0m
+ Silk Board
+LEGEND :
+Existing Flyover
+Proposed Tunnel East - West Corridor
+Metro Line (BMRCL)
+Existing Asphalt Road
+* Total number of Major Cross Roads with Traffic Signal : 13Nos
+* Total number of Cross Roads (RHS and LHS) : 108 Nos
+* Total number of Bus Stop (RHS and LHS) : 46 Nos
+White topping Road
+TITLE :
+PROJECT ROAD SHOWING EXISTING TRAFFIC SIGNALS
+PROJECT:
+DRAWING NO : 
+SHEET NO : 1 OF 1
+SCALE = 1 : NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+CONSULTANTS:
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+CLIENT:
+SSP/DWG/PRJ/2025-26/18-5

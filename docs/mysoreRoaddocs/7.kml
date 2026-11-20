@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="7" id="7">
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="id" type="string"></SimpleField>
+	<SimpleField name="project" type="string"></SimpleField>
+	<SimpleField name="folder" type="string"></SimpleField>
+	<SimpleField name="approx_length" type="string"></SimpleField>
+	<SimpleField name="status" type="string"></SimpleField>
+</Schema>
+<Folder><name>7</name>
+  <Placemark id="7.1">
+	<name>7. Sirsi Circle – Nayandahalli</name>
+	<description>7. Sirsi Circle – Nayandahalli</description>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#7">
+		<SimpleData name="id">2026-08-19_elevated-corridor.7</SimpleData>
+		<SimpleData name="project">Elevated Corridors (Category A-C)</SimpleData>
+		<SimpleData name="folder">Category B (5-10km) elevated corridors</SimpleData>
+		<SimpleData name="approx_length">5.2 km  (Cat B)</SimpleData>
+		<SimpleData name="status">Tender floated</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>77.55671,12.96038 77.55617,12.96001 77.55579,12.95959 77.55514,12.95868 77.5549,12.95853 77.55363,12.95798 77.55035,12.957 77.54892,12.95683 77.54717,12.95654 77.54624,12.95614 77.54534,12.95557 77.54466,12.95501 77.543,12.95388 77.54246,12.95368 77.54074,12.95228 77.53882,12.95109 77.53832,12.95089 77.53768,12.95052 77.53675,12.94959 77.53617,12.94909 77.53419,12.94784 77.53289,12.9475</coordinates></LineString>
+  </Placemark>
+</Folder>
+</Document></kml>

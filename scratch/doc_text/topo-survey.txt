@@ -1,0 +1,1626 @@
+=== PAGE 1 ===
+Tunnel
+East - West Corridor
+Metro Purple Line
+Metro Purple Line
+SWAMI VIVEKANANDA ROAD METRO STATION
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+ER
+EROW
+EROW
+EROW
+EROW
+CH:0.00m
+CH:50.00m
+CH:100.00m
+CH:150.00m
+CH:200.00m
+CH:250.00m
+CH:300.00m
+CH:350.00m
+CH:400.00m
+CH:450.00m
+CH:500.00m
+CH:550.00m
+CH:600 00m
+BH-1
+25.1m
+24.9m
+25m
+25.3m
+25.2m
+26.6m
+26.7m
+26.8m
+25.4m
+24.8m
+25m
+23.3m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 1 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+SSP/DWG/PRJ/2025-26/18-6
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 2 ===
+Tunnel
+East - West Corridor
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:200.00m
+CH:250.00m
+CH:300.00m
+CH:350.00m
+CH:400.00m
+CH:450.00m
+CH:500.00m
+CH:550.00m
+CH:600.00m
+CH:650.00m
+CH:700.00m
+CH:750.00m
+CH:800.00m
+CH:850.00m
+CH:900.00m
+CH:950.00m
+CH:1000.00m
+25.2m
+26.6m
+26.7m
+26.8m
+25.4m
+24.8m
+25m
+23.3m
+24.3m
+23.9m
+23.9m
+24.5m
+24.9m
+23.8m
+23.9m
+24.4m
+24.4m
+24.5m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 2 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+SSP/DWG/PRJ/2025-26/18-6
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 3 ===
+Metro Purple Line
+Indian Overseas Bank
+Good people to grow with
+OW
+OW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:600.00m
+CH:650.00m
+CH:700
+CH
+CH:850.00m
+CH:900.00m
+CH:950.00m
+CH:1000.00m
+CH:1050.00m
+CH:1100.00m
+CH:1150.00m
+CH:1200.00m
+CH:1250.00m
+CH:1300.00m
+CH:1350.00m
+CH:1400.00m
+CH:1450.00m
+CH:1500.00m
+CH:1550.00m
+CH:1600.00m
+CH:1650.00m
+BH-2
+24.3m
+23.9m
+23.9m
+24.5m
+24.9m
+23.8m
+23.9m
+24.4m
+24.4m
+24.5m
+24.4m
+24.2m
+24.5m
+24.3m
+23.9m
+23.9m
+23.8m
+30.3m
+29.8m
+30.8m
+30.3m
+30.2m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 3 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+SSP/DWG/PRJ/2025-26/18-6
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 4 ===
+Indiran
+Indian Overseas Bank
+Good people to grow with
+OW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+ERO
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:1200.00m
+CH:1250.00m
+CH:1300.00m
+CH:1350.00m
+CH:1400.00m
+CH:1450.00m
+CH:1500.00m
+CH:1550.00m
+CH:1600.00m
+CH:1650.00m
+CH:1700.00m
+CH:1750.00m
+CH:1800.00m
+CH:1850.00m
+CH:1900.00m
+CH:1950.00m
+CH:2000.00m
+CH:2050.00m
+CH:2100.00m
+BH-2
+24.5m
+24.3m
+23.9m
+23.9m
+23.8m
+30.3m
+29.8m
+30.8m
+30.3m
+30.2m
+30.9m
+30.6m
+31m
+31.2m
+30.7m
+30.6m
+30.6m
+29.7m
+31.1m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 4 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+SSP/DWG/PRJ/2025-26/18-6
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 5 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:2100.00m
+CH:2150.00m
+CH:2200.00m
+CH:2250.00m
+CH:2300.00m
+CH:2350.00m
+CH:2400.00m
+CH:2450.00m
+CH:2500.00m
+CH:2550.00m
+CH:2600.00m
+CH:2650.00m
+CH:2700.00m
+CH:2750.00m
+CH:2800.00m
+BH-3
+31.1m
+30.8m
+30.7m
+30.7m
+30.5m
+31.4m
+31.6m
+31.1m
+31.6m
+31m
+30.7m
+31.2m
+30.2m
+29.5m
+30.6m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 5 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 6 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+Storm Water Drain
+Storm Water Drain
+Storm Water Drain
+Storm Water Drain
+ROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+E
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:2750.00m
+CH:2800.00m
+CH:2850.00m
+CH:2900.00m
+CH:2950.00m
+CH:3000.00m
+CH:3050.00m
+CH:3100.00m
+CH:3150.00m
+CH:3200.00m
+CH:3250.00m
+CH:3300.00m
+CH:3400.00m
+CH:3450.00m
+CH:3500.00m
+CH:3350.00m
+BH-4
+29.5m
+30.6m
+30m
+30m
+30.1m
+30m
+31.3m
+29.9m
+31.3m
+ROW
+EROW
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 6 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 7 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:3500.00m
+CH:3550.00m
+CH:3600.00m
+CH:3650.00m
+CH:3700.00m
+CH:3750.00m
+CH:3800.00m
+CH:3850.00m
+CH:3900.00m
+CH:3950.00m
+CH:4000.00m
+CH:4050.00m
+CH:4100.00m
+CH:4150.00m
+CH:4200.00m
+28.9m
+31m
+30.7m
+30.5m
+30.6m
+31m
+30.6m
+31.6m
+31.4m
+29.8m
+29.9m
+30.7m
+EROW
+EROW
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 7 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 8 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:4200.00m
+CH:4250.00m
+CH:4300.00m
+CH:4350.00m
+CH:4400.00m
+CH:4450.00m
+CH:4500.00m
+CH:4550.00m
+CH:4600.00m
+CH:4650.00m
+CH:4700.00m
+CH:4750.00m
+CH:4800.00m
+CH:4850.00m
+CH:4900.00m
+CH:4950.00m
+CH:5000.00m
+CH:5050.00m
+30.7m
+30.8m
+30m
+33m
+32m
+31.3m
+33.7m
+36.4m
+39.1m
+38m
+35.5m
+34m
+32m
+33.5m
+36.5m
+35.7m
+35.8m
+34.2m
+32m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 8 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 9 ===
+ASC Play Ground
+W
+EROW
+EROW
+EROW
+CH:5050.00m
+CH:5100.00m
+CH:5150.00m
+CH:5200.00m
+CH:5250.00m
+CH:5300.00m
+CH:5350.00m
+CH:5400.00m
+CH:5450.00m
+CH:5500.00m
+CH:5550.00m
+CH:5600.00m
+CH:5650.00m
+CH:5700.00m
+CH:5750.00m
+CH:5800.00m
+34.2m
+32m
+31.6m
+23.3m
+31.2m
+31.5m
+32.6m
+35.5m
+35m
+34.1m
+31.6m
+31.9m
+32.4m
+32.9m
+33m
+32.8m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 9 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 10 ===
+Start of Flyover
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EJIPURA
+JUNCTION
+C
+CH:5800.00m
+CH:5850.00m
+CH:5900.00m
+CH:5950.00m
+CH:6000.00m
+CH:6050.00m
+CH:6100.00m
+CH:6150.00m
+CH:6200.00m
+CH:6250.00m
+CH:6300.00m
+CH:6350.00m
+CH:6400.00m
+CH:6450.00m
+CH:6500
+BH-6
+33m
+32.8m
+32.3m
+32.5m
+33.7m
+35.9m
+34.7m
+36.8m
+36.9m
+36.5m
+34.5m
+35.8m
+35.2m
+33.9m
+36.1m
+29m
+28.6m
+28.8m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 10 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 11 ===
+Storm Water Drain
+Storm Water Drain
+EROW
+EROW
+EROW
+EROW
+SONY WORLD
+JUNCTION
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+OW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EJIPURA
+JUNCTION
+CH:6450.00m
+CH:6500.00m
+CH:6550.00m
+CH:6600.00m
+CH:6650.00m
+CH:6700.00m
+CH:6750.00m
+CH:6800.00m
+CH:6850.00m
+CH:6900.00m
+CH:6950.00m
+CH:7000.00m
+CH:7050.00m
+CH:7100.00m
+CH:7150.00m
+CH:7200.00m
+CH:7250.00m
+CH:7300.00m
+6
+BH-7
+29m
+28.6m
+28.8m
+29m
+27.4m
+26m
+29.1m
+29.9m
+23m
+30m
+30.8m
+30.3m
+27.8m
+30.8m
+30.4m
+31.3m
+30.4m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 11 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 12 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:7200.00m
+CH:7250.00m
+CH:7300.00m
+CH:7350.00m
+CH:7400.00m
+CH:7450.00m
+CH:7500.00m
+CH:7550.00m
+CH:7600.00m
+CH:7650.00m
+CH:7700.00m
+CH:7750.00m
+CH:7800.00m
+CH:7850.00m
+CH:7900.00m
+CH:7950.00m
+CH:8000.00m
+BH-7
+30.4m
+30.6m
+31.9m
+32.4m
+30.8m
+31.2m
+31.2m
+31m
+29.9m
+31.4m
+31.1m
+31.2m
+31m
+32m
+32.2m
+32.2m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 12 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 13 ===
+0+654
+nel
+ntry Ramp 08
+arjapur Road)
+PROW
+PROW
+PROW
+PROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+E
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+CH:8000.00m
+CH:8050.00m
+CH:8100.00m
+CH:8150.00m
+CH:8200.00m
+CH:8250.00m
+CH:8300.00m
+CH:8350.00m
+CH:8400.00m
+CH:8450.00m
+CH:8500.00m
+CH:8550.00m
+CH:8600.00m
+CH:8650.00m
+CH:870
+CH:8850.00m
+CH:8900.00m
+0m
+BH-8
+32.2m
+31.8m
+30.2m
+30m
+31.1m
+31.9m
+29.5m
+29.4m
+31.4m
+31.2m
+31m
+31.7m
+30.4m
+31.4m
+30.7m
+30.2m
+31
+33.9m
+EROW
+EROW
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 13 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 14 ===
+Madivala
+Underpass
+Exit Ramp 01
+Start of Main
+unnel Tube 2
+0+000
+0+100
+0+200
+0+300
+0+400
+0+500
+0+600
+0+654
+PROW
+PROW
+PROW
+OW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+2.3m
+16.9m
+57.0m
+16.5m
+2.0m
+81.7m
+5.0m
+8.1m
+5.8m
+4.9m
+22.5m
+4.2m
+53.7m
+7.6m
+18.2m
+30.3m
+6.1m
+4.0m
+11.4m
+0+300
+0+400
+0+455
+16+500
+16+600
+16+700
+16+745
+16+500
+16+571
+16+400
+End of Main Tunnel
+Tube 1
+
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+E
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+ROW
+EROW
+EROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+CH:8600.00m
+CH:8650.00m
+CH:8700.00m
+CH:8750.00m
+CH:8800.00m
+CH:8850.00m
+CH:8900.00m
+CH:8950.00m
+CH:9000.00m
+BH-9
+31.7m
+30.4m
+31.4m
+30.7m
+30.2m
+31.8m
+32.5m
+31.2m
+29.6m
+28.9m
+EROW
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 14 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 15 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+W
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:8650.00m
+CH:8700.00m
+CH:8750.00m
+CH:8800.00m
+CH:8900.00m
+CH:8950.00m
+CH:9000.00m
+CH:9050.00m
+CH:9100.00m
+CH:9150.00m
+CH:9200.00m
+CH:9250.00m
+CH:9300.00m
+CH:9350.00m
+CH:9400.00m
+CH:9450.00m
+CH:9500.00m
+CH:9550.00m
+CH:9600.00m
+CH:9650.00m
+31.2m
+29.6m
+28.9m
+27.5m
+28.6m
+30.7m
+26.2m
+27.4m
+36.1m
+38.3m
+40.3m
+36.7m
+43.5m
+45m
+78.2m
+73.8m
+EROW
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 15 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 16 ===
+Metro Line
+Metro Line
+oard Metro Staton
+Metro Line
+Metro Line
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+CH:9650.00m
+CH:9700.00m
+CH:9750.00m
+CH:9785.00m
+BH-10
+78.2m
+73.8m
+50.8m
+62.2m
+Metro Line
+Metro Line
+Metro Line
+CH:9696.00m
+CH:9741.00m
+CH:9766.00m
+CH:9820.00m
+CH:9865.00m
+CH:9910.00m
+CH:9955.00m
+CH:10000.00m
+CH:10045.00m
+CH:10090.00m
+CH:10135.00m
+CH:10180.00m
+CH:10225.00m
+CH:10270.00m
+CH:10315.00m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 16 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 17 ===
+BOMMANAHALLI METRO STATION
+Metro Line
+Metro Line
+Metro Line
+Metro Line
+Metro Line
+CH:10315.00m
+CH:10360.00m
+CH:10405.00m
+CH:10450.00m
+CH:10495.00m
+CH:10540.00m
+CH:10585.00m
+CH:10630.00m
+CH:10675.00m
+CH:10720.00m
+CH:10765.00m
+CH:10810.00m
+CH:10855.00m
+CH:10900.00m
+CH:10945.00m
+CH:10975.00m
+TOPOGRAPHICAL SURVEY PLAN
+SHEET NO : 17 OF 17
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:

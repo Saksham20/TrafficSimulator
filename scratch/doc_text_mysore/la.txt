@@ -1,0 +1,401 @@
+=== PAGE 1 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+ROW
+EROW
+EROW
+EROW
+E
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+PROW
+SIRSI CIRCLE
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+CH:200.00m
+CH:300.00m
+CH:350.00m
+CH:400.00m
+CH:450.00m
+CH:500.00m
+CH:550.00m
+CH:600.00m
+CH:650.00m
+CH:700.00m
+CH:265.00m
+CH:340.00m
+CH:528.00m
+CH:0.00m
+CH:50.00m
+CH:100.00m
+CH:150.00m
+START OF PROJECT
+CH
+LAND ACQUISITION PLAN
+SHEET NO : 1 OF 4
+SCALE = 1 : 2000
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+SSP/DWG/PRJ/2025-26/19-8
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+LEGEND :
+EROW
+PROW
+Proposed Area
+Part Number
+EROW
+PROW
+EROW
+PROW
+for Acquisition
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 2 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+OW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+CH:2400.00m
+CH:2450.00m
+CH:0.00m
+CH:100.00m
+CH:175.00m
+CH:2583.00m
+CH:225.00m
+CH:275.00m
+CH:332.00m
+CH:2555.00m
+CH:0.00m
+CH:50.00m
+CH:100.00m
+CH:150.00m
+CH:200.00m
+CH
+CH:2383.00m
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+SHEET NO : 2 OF 4
+SCALE = 1 : 2000
+DATE: 23-01-2026
+LAND ACQUISITION PLAN
+SSP/DWG/PRJ/2025-26/19-8
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+LEGEND :
+EROW
+PROW
+Proposed Area
+Part Number
+EROW
+PROW
+EROW
+PROW
+for Acquisition
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 3 ===
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+EROW
+SHELL
+SHELL
+PROW
+PRO
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+CH:0.00m
+SHEET NO : 3 OF 4
+SCALE = 1 : 2000
+DATE: 23-01-2026
+LAND ACQUISITION PLAN
+SSP/DWG/PRJ/2025-26/19-8
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+LEGEND :
+EROW
+PROW
+Proposed Area
+Part Number
+EROW
+PROW
+EROW
+PROW
+for Acquisition
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+
+=== PAGE 4 ===
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+PROW
+CH:550.00m
+CH:600.00m
+CH:650.00m
+CH:700.00m
+CH:750.00m
+CH:800.00m
+CH:850.00m
+CH:900.00m
+CH:905.00m
+SHEET NO : 4 OF 4
+SCALE = 1 : 2000
+DATE: 23-01-2026
+LAND ACQUISITION PLAN
+SSP/DWG/PRJ/2025-26/19-8
+Construction of Proposed Elevated Corridor from
+Sirsi Circle to Nayandahalli on Mysuru Road
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+LEGEND :
+EROW
+PROW
+Proposed Area
+Part Number
+EROW
+PROW
+EROW
+PROW
+for Acquisition
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:

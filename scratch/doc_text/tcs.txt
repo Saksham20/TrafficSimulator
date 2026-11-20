@@ -1,0 +1,1201 @@
+=== PAGE 1 ===
+2.4m
+24.0m 
+2.5% Slope
+Property Line
+1.0m
+Existing Cross Section @ CH: 0+100
+1.0m
+7.5m
+2.5% Slope
+Property Line
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+3.4m
+1.2m
+7.5m
+Drain
+FP
+Carriageway
+Carriageway
+FP
+Drain
+3.4m
+24.0m 
+2.5% Slope
+Property Line
+1.0m
+Existing Cross Section @ CH: 0+480
+1.0m
+7.5m
+2.5% Slope
+Property Line
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+2.4m
+1.2m
+7.5m
+Drain
+FP
+Carriageway
+Carriageway
+FP
+Drain
+
+=== PAGE 2 ===
+2.0m
+24.0m 
+2.5% Slope
+Property Line
+1.0m
+Existing Cross Section @ CH: 1+200
+1.0m
+8.5m
+2.5% Slope
+Property Line
+Bituminous Concrete (BC)
+2.0m
+1.0m
+8.5m
+Carriageway
+Carriageway
+FP
+FP
+Drain
+Drain
+ Paver Blocks
+Cover Slabs
+4.8m
+1.2m
+Existing Cross Section @ CH: 2+050
+0.4m
+6.0m
+2.5% Slope
+Property Line
+3.4m
+1.2m
+6.0m
+2.5% Slope
+Property Line
+3.2m
+3.8m
+Carriageway
+Buffer
+FP
+FP
+Drain
+Drain
+Buffer
+Carriageway
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+ Paver Blocks
+
+=== PAGE 3 ===
+2.0m
+30.0m 
+1.1m
+Existing Cross Section @ CH: 3+070
+0.4m
+6.0m
+2.5% Slope
+Property Line
+2.8m
+1.1m
+6.0m
+2.5% Slope
+Property Line
+3.1m
+7.5m
+Carriageway
+Carriageway
+FP
+FP
+Drain
+Drain
+Buffer
+Buffer
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+ Paver Blocks
+2.0m
+30.0m 
+1.5m
+Existing Cross Section @ CH: 4+200
+1.5m
+8.5m
+2.5% Slope
+Property Line
+2.5m
+1.5m
+8.5m
+1.4m
+2.6m
+Carriageway
+Carriageway
+FP
+FP
+Drain
+Drain
+Buffer
+Buffer
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+ Paver Blocks
+2.5% Slope
+Property Line
+
+=== PAGE 4 ===
+1.5m
+30.0m 
+1.0m
+Existing Cross Section @ CH: 5+650
+2.2m
+8.5m
+2.5% Slope
+Property Line
+2.5m
+1.5m
+8.5m
+1.5m
+2.8m
+Carriageway
+Carriageway
+FP
+FP
+Drain
+Drain
+Buffer
+Buffer
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+ Paver Blocks
+2.5% Slope
+Property Line
+1.7m
+27.40m 
+2.5% Slope
+Property Line
+1.2m
+Existing Cross Section @ CH: 6+580
+2.2m
+8.7m
+1.5m
+9.7m
+Drain
+Carriageway
+Carriageway
+FP Drain
+2.5% Slope
+Property Line
+2.4m
+FP
+Bituminous Concrete (BC)
+ Paver Blocks
+
+=== PAGE 5 ===
+30.0m 
+1.2m
+Existing Cross Section @ CH: 8+700
+0.6m
+11.0m
+2.5% Slope
+Property Line
+2.5m
+1.2m
+11.0m
+2.5m
+Carriageway
+Carriageway
+FP
+FP
+Drain
+Drain
+ Paver Blocks
+Cover Slabs
+2.5% Slope
+Property Line
+Bituminous Concrete (BC)
+27.0m 
+Existing Cross Section @ CH: 9+100
+0.6m
+14.0m
+2.5% Slope
+Property Line
+1.5m
+9.40m
+Carriageway
+Carriageway
+Drain
+Cover Slabs
+2.5% Slope
+Property Line
+Bituminous Concrete (BC)
+1.5m
+Drain
+
+=== PAGE 6 ===
+
+=== PAGE 7 ===
+PSC PIER CAP
+SECTION FOR 17200
+PLAN
+STRUT
+(M150)
+DRAINAGE
+SPOUT
+225
+275
+150
+UHPFRC U GRIDER
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+250
+FRL
+FRL
+M150CC
+280
+100
+3mm WATER PROOFING MEMBRANE
+750
+3600
+8700
+1800
+3600
+750
+8700
+3600
+750
+3600
+5100
+750
+750
+750
+3600
+500
+1200
+7500
+7500
+500
+17200
+400
+4230
+1315
+1315
+4230
+800
+6500
+5520
+6110
+2.5%
+2.5%
+2250
+5500
+2500
+SECTION & PLAN FOR 17.20m
+SHEET NO : 1 OF 1
+SCALE = 1:75
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-1
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+GROUND LEVEL
+GROUND LEVEL
+
+=== PAGE 8 ===
+PSC PIER CAP
+PLAN
+SECTION FOR 12000
+7 (D - 15.2)
+2000
+3000
+1400
+150
+2300
+UHPFRC U GRIDER
+M150CC
+SPOUT
+DRAINAGE
+280
+12000
+CARRIAGEWAY
+11000
+500
+500
+2100
+1550
+150
+250
+300
+2307
+200
+2307
+2900
+500
+1600
+750
+3600
+750
+3600
+8700
+1800
+750
+3600
+750
+8700
+3600
+750
+750
+5100
+3600
+8000
+250
+250
+5500
+2500
+800
+400
+SECTION & PLAN FOR 12.00m
+SHEET NO : 1 OF 1
+SCALE = 1:75
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-2
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+GROUND LEVEL
+GROUND LEVEL
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+
+=== PAGE 9 ===
+SECTION FOR 8500
+PSC PIER CAP
+PLAN
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+22 (D - 15.2)
+PLATE
+SPOUT
+2.5%
+DRAINAGE
+FRL
+50mm WEARING COURSE WITH
+STONE MATRIX ASHPALT
+3mm WATERPROOFING MEMBRANE
+4300
+1500
+UHPFRC U
+GRIDER
+M150CC
+3000
+650
+650
+1600
+500
+500
+7500
+8500
+5500
+2500
+280
+1750
+4000
+1750
+500
+200
+275
+2200
+400
+800
+4500
+2950
+SECTION & PLAN FOR 8.50m
+SHEET NO : 1 OF 1
+SCALE = 1:75
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-3
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+GROUND LEVEL
+GROUND LEVEL
+
+=== PAGE 10 ===
+TYPICAL CROSS SECTION @ CH: 0+100 (FROM 0+100 TO 0+595)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-4
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+2200
+Property Line
+1000
+Cross Section @ CH: 0+100 (from 0+100 to 0+595)
+Property Line
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+FP
+Drain
+7200
+7200
+3200
+1200
+Drain
+FP
+PSC PIER CAP
+7 (D - 15.2)
+2000
+3000
+1400
+150
+2300
+UHPFRC U GRIDER
+M150CC
+SPOUT
+DRAINAGE
+280
+12000
+CARRIAGEWAY
+11000
+500
+500
+2100
+1550
+150
+250
+300
+2307
+200
+2307
+2900
+500
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+
+=== PAGE 11 ===
+TYPICAL CROSS SECTION @ CH: 2+050 (FROM CH: 1+693 TO 2+728)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-5
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+Cross Section @ CH: 2+050 (from Ch: 1+693 to 2+728)
+Property Line
+Property Line
+ Paver Blocks
+Cover Slabs
+Thin White Topping
+ Paver Blocks
+10000
+8400
+1200
+3400
+1200
+3800
+FP
+FP
+Drain
+Drain
+PSC PIER CAP
+7 (D - 15.2)
+2000
+3000
+1400
+150
+2300
+UHPFRC U GRIDER
+M150CC
+SPOUT
+DRAINAGE
+280
+12000
+CARRIAGEWAY
+11000
+500
+500
+2100
+1550
+150
+250
+300
+2307
+200
+2307
+2900
+500
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+
+=== PAGE 12 ===
+TYPICAL CROSS SECTION @ CH: 8+700 (FROM 8+683 TO 8+713)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-6
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+1.2m
+Property Line
+2.5m
+1.2m
+2.5m
+FP
+FP
+Drain
+Drain
+ Paver Blocks
+Cover Slabs
+Property Line
+Bituminous Concrete (BC)
+10150
+10150
+STRUT
+(M150)
+DRAINAGE
+SPOUT
+225
+275
+150
+UHPFRC U GRIDER
+250
+FRL
+FRL
+M150CC
+PSC PIER CAP
+280
+100
+Cross Section @ CH: 8+700 (from 8+683 to 8+713)
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+
+=== PAGE 13 ===
+TYPICAL CROSS SECTION @ CH: 0+480 ON HOSUR ROAD (FROM 0+346 TO 0+540)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-7
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+2.1m
+Property Line
+2.0m
+1.2m
+Footpath cum drain
+ Paver Blocks
+Cover Slabs
+Property Line
+8200
+5400
+Footpath cum drain
+16000
+6875
+6875
+500
+500
+STRUT
+(M150)
+DRAINAGE
+SPOUT
+225
+275
+150
+UHPFRC U GRIDER
+250
+FRL
+FRL
+M150CC
+PSC PIER CAP
+280
+100
+Cross Section @ CH: 0+480 on Hosur Road (from 0+346 to 0+540)
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+
+=== PAGE 14 ===
+TYPICAL CROSS SECTION @ CH: 8+700 (FROM 8+683 TO 8+713)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-8
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+Cross Section @ CH: 0+480 on Hosur Road (from 0+346 to 0+540)
+600
+650
+150
+150
+100
+100
+700
+600
+75
+35
+1040
+1400
+75
+35
+890
+1250
+For Span 30 to 35m
+CROSS SECTION OF I GIRDER
+For Span 40 to 45m
+CROSS SECTION OF I GIRDER
+450
+150
+100
+290
+500
+35
+650
+75
+CROSS SECTION OF I GIRDER
+For Span 15 to 25m
+125
+125
+125
+275
+DECK SLAB
+ELECTRICAL
+CABLE DUCT
+PP
+225
+500
+250
+250
+1050
+DRIP MOULD
+WEARING COAT
+R=250
+50
+CRASH BARRIER OVER VIADUCT
+Scale=1:25
+
+=== PAGE 15 ===
+PORTAL FRAME FOR SPAN OF 25.0m STURTTED BOX WITH I GIRDER (UHPFRC)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-9
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+SECTION
+STRUT
+(M150)
+DRAINAGE
+SPOUT
+225
+275
+150
+250
+FRL
+FRL
+280
+100
+PORTAL FRAME FOR SPAN OF 25.0m STURTTED BOX WITH I GIRDER (UHPFRC)
+@ Ch: 9066.00m
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+TYPICAL CROSS SECTION OF
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+
+=== PAGE 16 ===
+PORTAL FRAME FOR SPAN OF 45.0m I GIRDER (UHPFRC)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-10
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+24000
+Existing
+Existing
+Existing Curved Box Girder (Double Decker)
+Existing RE Wall Approach (Hosur Road Flyover)
+Existing Crash Barrier
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+PLATE
+SPOUT
+2.5%
+DRAINAGE
+FRL
+UHPFRC U GRIDER
+M150CC
+7 (D - 15.2)
+SPOUT
+2.5%
+DRAINAGE
+FRL
+UHPFRC U GRIDER
+M150CC
+PORTAL FRAME FOR SPAN OF 45.0m I GIRDER (UHPFRC)
+CH: 9516.00m
+TYPICAL CROSS SECTION OF
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+3mm WATER PROOFING MEMBRANE
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+
+=== PAGE 17 ===
+PORTAL FRAME FOR SPAN OF 45.0m I GIRDER (UHPFRC)
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-11
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+TYPICAL CROSS SECTION OF
+PORTAL FRAME FOR SPAN OF 45.0m I GIRDER (UHPFRC)
+CH: 9326.00m
+SECTION
+SCALE 1:100
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+PLATE
+SPOUT
+2.5%
+DRAINAGE
+FRL
+UHPFRC U GRIDER
+M150CC
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+22 (D - 15.2)
+PLATE
+2.5%
+FRL
+7 (D - 15.2)
+50mm UHPFRC
+END DIAPHRAGM
+PLATE
+SPOUT
+2.5%
+DRAINAGE
+FRL
+UHPFRC U GRIDER
+M150CC
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+3mm WATER PROOFING MEMBRANE
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+3mm WATER PROOFING MEMBRANE
+50mm WEARING COURSE WITH STONE MATRIX ASHPALT
+
+=== PAGE 18 ===
+LONGITUDINAL SECTION OF STRUTTED BOX GIRDER
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-12
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+TYPICAL CROSS SECTION OF
+(Varies between 0.0m to 0.0m)
+600  DIAPHRAGM
+600  DIAPHRAGM
+  Expansion Joint
+  Expansion Joint
+2250
+1500
+FRL
+FRL
+45000
+PSC PIER CAP
+PSC PIER CAP
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+
+=== PAGE 19 ===
+TYPICAL CROSS SECTION OF REINFORCED EARTH  WALL APPROACH
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-13
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+TYPICAL CROSS SECTION OF
+17200
+PROPERTY LIMIT
+ Service Road
+PAVEMENT CRUST 
+2.5%
+ Service Road
+PAVEMENT CRUST 
+2.5%
+40mm BC
+80mm DBM
+250mm WMM
+200mm GSB
+Levelling Pad
+RE Wall Facia
+Drainage Media
+Friction Slab
+Crash barrier
+500mm Sub Grade
+FRL
+NOTES:
+2. THE DRAWING SHALL NOT BE SCALED, ONLY WRITTEN DIMENSIONS SHALL BE FOLLOWED. 
+1. ALL DIMENSIONS ARE IN MILLIMETERS UNLESS OTHERWISE SPECIFIED.
+(a) UHPFRC GIRDER
+3. CONCRETE IN VARIOUS ELEMENTS SHALL BE AS UNDER
+(c) CRASH BARRIERS                    
+- M40
+(b) DECK SLAB
+- M40
+- M150
+
+=== PAGE 20 ===
+TYPICAL CROSS SECTION OF REINFORCED EARTH  WALL APPROACH
+SHEET NO : 1 OF 1
+SCALE = NTS
+DATE: 23-01-2026
+Construction of Proposed Elevated Corridor from
+Old Madras Road from Swami Vivekananda Metro
+Siddi Shakthi Projects
+No.93/31, Asha Nivas, TG Layout,
+Ittamadu, Banashankari 3rd Stage, 
+Hosakerehalli Post,Bengaluru - 560085.
+Phone No : +  91  80  43008989
+Email: ssprj2001@gmail.com
+BENGALURU SMART INFRASTRUCTURE LIMITED (B-SMILE)
+Vasantha Nagar, Bengaluru - 560051.
+#30/1,Thimmaiah Road, Miller Tank Bund Area,
+Station to Silk Board Junction on Hosur Road via 
+Indiranagar-Domlur-Madiwala
+SSP/DWG/PRJ/2025-26/18-10-14
+TITLE :
+PROJECT:
+DRAWING NO : 
+CONSULTANTS:
+CLIENT:
+TYPICAL CROSS SECTION OF
+Slope 2.5%
+6000
+500
+7000
+500
+PRIVATE PROPERTY
+ Service Road
+PAVEMENT CRUST 
+SLOPE
+2.5%
+GL
+1000
+40mm BC
+80mm DBM
+250mm WMM
+200mm GSB
+PRIVATE PROPERTY
+ Service Road
+PAVEMENT CRUST 
+SLOPE
+2.5%
+Friction Slab
+500mm GSB
+Crash barrier
+FRL
+TYPICAL CROSS SECTION OF REINFORCED EARTH  WALL APPROACH
